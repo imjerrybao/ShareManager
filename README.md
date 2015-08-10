@@ -1,5 +1,5 @@
 # ShareManagerDemo
-A SNS Platform Share Manager for ios, support Facebook, Twitter, Weixin, QQ and Weixin.
+A SNS Platform Share Manager for ios, support Facebook, Twitter, QQ and Weixin.
 
 # How To Integrate to Your Project
 1. Install via pod
@@ -44,4 +44,4 @@ A SNS Platform Share Manager for ios, support Facebook, Twitter, Weixin, QQ and 
 
     Reference to the example
 
-4. Replace the share platforms app key, secret, redirect uri to yours in file SMConfig.m
+4. Replace the share platforms app key, secret and redirect uri to yours in file SMConfig.m
