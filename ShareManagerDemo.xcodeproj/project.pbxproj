@@ -676,6 +676,7 @@
 					"$(PROJECT_DIR)/ShareManager/lib/WeChatSDK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -701,6 +702,7 @@
 					"$(PROJECT_DIR)/ShareManager/lib/WeChatSDK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
 		};
