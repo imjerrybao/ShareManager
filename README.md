@@ -38,4 +38,4 @@ pod install ShareManager
     ````
 
 3. add URL Schemes to Info.plist
-Reference to the example
+    Reference to the example
