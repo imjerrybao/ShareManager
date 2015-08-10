@@ -56,6 +56,7 @@
 		3BD55C0E1B743FF3006428ED /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BD55C0D1B743FF3006428ED /* libc++.dylib */; };
 		3BD55C101B744564006428ED /* SMResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3BD55C0F1B744564006428ED /* SMResources.bundle */; };
 		3BF6384B1B78893C002DFC78 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 3BF6384A1B78893C002DFC78 /* README.md */; };
+		3BF6384D1B789498002DFC78 /* ShareManager.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 3BF6384C1B789498002DFC78 /* ShareManager.podspec */; };
 		86A2B4BC4C5C58A2BD453719 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A42B6F5E5C8161BF86C994B5 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -71,8 +72,6 @@
 		3B8311C41B72050F00CF6435 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3B8311C61B72050F00CF6435 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3B8311C91B72050F00CF6435 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		3B8311D41B72051000CF6435 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3B8311D51B72051000CF6435 /* ShareManagerDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareManagerDemoTests.m; sourceTree = "<group>"; };
 		3B8313141B7205E700CF6435 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
 		3B8313151B7205E700CF6435 /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
 		3B8313171B7205E700CF6435 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
@@ -161,6 +160,7 @@
 		3BD55C0D1B743FF3006428ED /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		3BD55C0F1B744564006428ED /* SMResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SMResources.bundle; sourceTree = "<group>"; };
 		3BF6384A1B78893C002DFC78 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		3BF6384C1B789498002DFC78 /* ShareManager.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ShareManager.podspec; sourceTree = "<group>"; };
 		4105FA7F4C3B5EF0FE155C63 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A42B6F5E5C8161BF86C994B5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -188,7 +188,6 @@
 			children = (
 				3B8312D91B7205E700CF6435 /* ShareManager */,
 				3B8311B81B72050F00CF6435 /* ShareManagerDemo */,
-				3B8311D21B72051000CF6435 /* ShareManagerDemoTests */,
 				3B8311B71B72050F00CF6435 /* Products */,
 				F1538F37C1FF5A61C7B18441 /* Pods */,
 				9EEC13B5C00A9F4FD4ADA4DF /* Frameworks */,
@@ -227,26 +226,10 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3B8311D21B72051000CF6435 /* ShareManagerDemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				3B8311D51B72051000CF6435 /* ShareManagerDemoTests.m */,
-				3B8311D31B72051000CF6435 /* Supporting Files */,
-			);
-			path = ShareManagerDemoTests;
-			sourceTree = "<group>";
-		};
-		3B8311D31B72051000CF6435 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				3B8311D41B72051000CF6435 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		3B8312D91B7205E700CF6435 /* ShareManager */ = {
 			isa = PBXGroup;
 			children = (
+				3BF6384C1B789498002DFC78 /* ShareManager.podspec */,
 				3BF6384A1B78893C002DFC78 /* README.md */,
 				3B8312DA1B7205E700CF6435 /* lib */,
 				3B83131A1B7205E700CF6435 /* ShareManager.h */,
@@ -477,6 +460,7 @@
 				3B8311C71B72050F00CF6435 /* Images.xcassets in Resources */,
 				3BD55C101B744564006428ED /* SMResources.bundle in Resources */,
 				3B8313911B720D4100CF6435 /* OATestServer.rb in Resources */,
+				3BF6384D1B789498002DFC78 /* ShareManager.podspec in Resources */,
 				3B8313491B7205E700CF6435 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

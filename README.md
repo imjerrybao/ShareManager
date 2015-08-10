@@ -41,4 +41,4 @@ pod install ShareManager
 
     Reference to the example
 
-4. Replace the share platforms app key, secret, redirect uri to yours
+4. Replace the share platforms app key, secret, redirect uri to yours in file SMConfig.m
