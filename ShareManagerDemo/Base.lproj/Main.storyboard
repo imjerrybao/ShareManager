@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4d-h9-16t">
+                                <rect key="frame" x="270" y="135" width="60" height="30"/>
+                                <state key="normal" title="单个分享">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareWithSingle:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hxn-MI-gdS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVQ-cR-rp7">
+                                <rect key="frame" x="270" y="360" width="60" height="30"/>
+                                <state key="normal" title="批量分享">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareWithBatch:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="6uY-eA-VNL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="选择平台:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqL-mF-jgP">
+                                <rect key="frame" x="16" y="291" width="65" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="Lcq-5W-AB9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Lcq-5W-AB9"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOV-mp-jWf">
+                                <rect key="frame" x="96" y="285" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="dSG-tV-L6f"/>
+                                    <constraint firstAttribute="width" constant="25" id="oh4-uk-yV7"/>
+                                </constraints>
+                                <state key="normal" image="SMResources.bundle/images/facebook1.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="enablePlatForm:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="4sd-5h-BcK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8wf-td-M0a">
+                                <rect key="frame" x="136" y="285" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="fzh-Z2-lTg"/>
+                                    <constraint firstAttribute="height" constant="25" id="nlZ-Ab-3fx"/>
+                                </constraints>
+                                <state key="normal" image="SMResources.bundle/images/twitter1.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="enablePlatForm:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="tHF-h8-4n7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2OL-Sf-2BR">
+                                <rect key="frame" x="176" y="285" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="NY8-lM-Zpf"/>
+                                    <constraint firstAttribute="width" constant="25" id="tXZ-gb-E78"/>
+                                </constraints>
+                                <state key="normal" image="SMResources.bundle/images/weibo1.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="enablePlatForm:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dgV-SR-YkV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfU-Zs-K3J">
+                                <rect key="frame" x="216" y="285" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="VnG-sv-LNA"/>
+                                    <constraint firstAttribute="height" constant="25" id="px1-qa-fUx"/>
+                                </constraints>
+                                <state key="normal" image="SMResources.bundle/images/weixin1.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="enablePlatForm:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="qcm-uV-0nA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xY4-dj-Z9W">
+                                <rect key="frame" x="256" y="285" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="0tO-lw-HJ6"/>
+                                    <constraint firstAttribute="height" constant="25" id="pUR-hJ-kM7"/>
+                                </constraints>
+                                <state key="normal" image="SMResources.bundle/images/qzone1.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="enablePlatForm:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="cAz-ii-42k"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mqL-mF-jgP" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="1pb-M9-Ma8"/>
+                            <constraint firstItem="mqL-mF-jgP" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="269" id="3HA-5F-QgW"/>
+                            <constraint firstAttribute="centerX" secondItem="m4d-h9-16t" secondAttribute="centerX" id="5My-eQ-KLX"/>
+                            <constraint firstItem="8wf-td-M0a" firstAttribute="leading" secondItem="eOV-mp-jWf" secondAttribute="trailing" constant="15" id="6z7-YM-hLf"/>
+                            <constraint firstItem="2OL-Sf-2BR" firstAttribute="leading" secondItem="8wf-td-M0a" secondAttribute="trailing" constant="15" id="FhZ-Sw-lXS"/>
+                            <constraint firstAttribute="centerY" secondItem="qVQ-cR-rp7" secondAttribute="centerY" multiplier="4:5" id="LkE-i7-zbX"/>
+                            <constraint firstAttribute="centerY" secondItem="m4d-h9-16t" secondAttribute="centerY" multiplier="2:1" id="QZI-op-3Nn"/>
+                            <constraint firstAttribute="centerX" secondItem="qVQ-cR-rp7" secondAttribute="centerX" id="QkT-l6-cqi"/>
+                            <constraint firstItem="bfU-Zs-K3J" firstAttribute="leading" secondItem="2OL-Sf-2BR" secondAttribute="trailing" constant="15" id="WFE-OZ-1uR"/>
+                            <constraint firstItem="8wf-td-M0a" firstAttribute="centerY" secondItem="2OL-Sf-2BR" secondAttribute="centerY" id="XqH-ux-kJR"/>
+                            <constraint firstItem="2OL-Sf-2BR" firstAttribute="centerY" secondItem="bfU-Zs-K3J" secondAttribute="centerY" id="Z4x-DY-nRe"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="mqL-mF-jgP" secondAttribute="bottom" constant="290" id="cu7-Os-0Z2"/>
+                            <constraint firstItem="eOV-mp-jWf" firstAttribute="leading" secondItem="mqL-mF-jgP" secondAttribute="trailing" constant="15" id="dQB-07-0iQ"/>
+                            <constraint firstItem="8wf-td-M0a" firstAttribute="centerY" secondItem="eOV-mp-jWf" secondAttribute="centerY" id="dZe-0e-fzf"/>
+                            <constraint firstItem="qVQ-cR-rp7" firstAttribute="top" secondItem="mqL-mF-jgP" secondAttribute="bottom" constant="51" id="ebH-mJ-uhN"/>
+                            <constraint firstAttribute="centerY" secondItem="mqL-mF-jgP" secondAttribute="centerY" id="gUT-u0-0xQ"/>
+                            <constraint firstItem="mqL-mF-jgP" firstAttribute="centerY" secondItem="eOV-mp-jWf" secondAttribute="centerY" constant="2.5" id="mTU-5G-eAW"/>
+                            <constraint firstItem="bfU-Zs-K3J" firstAttribute="centerY" secondItem="xY4-dj-Z9W" secondAttribute="centerY" id="ygX-d9-PMA"/>
+                            <constraint firstItem="xY4-dj-Z9W" firstAttribute="leading" secondItem="bfU-Zs-K3J" secondAttribute="trailing" constant="15" id="yva-87-03O"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="3HA-5F-QgW"/>
+                                <exclude reference="LkE-i7-zbX"/>
+                                <exclude reference="cu7-Os-0Z2"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="facebookBtn" destination="eOV-mp-jWf" id="zMh-45-OuM"/>
+                        <outlet property="qzoneBtn" destination="xY4-dj-Z9W" id="GiN-EM-G6Y"/>
+                        <outlet property="twitterBtn" destination="8wf-td-M0a" id="ktJ-3b-fuH"/>
+                        <outlet property="weiboBtn" destination="2OL-Sf-2BR" id="0ul-fa-Ogh"/>
+                        <outlet property="weixinBtn" destination="bfU-Zs-K3J" id="cch-Oa-Vzx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="SMResources.bundle/images/facebook1.png" width="16" height="16"/>
+        <image name="SMResources.bundle/images/qzone1.png" width="16" height="16"/>
+        <image name="SMResources.bundle/images/twitter1.png" width="16" height="16"/>
+        <image name="SMResources.bundle/images/weibo1.png" width="16" height="16"/>
+        <image name="SMResources.bundle/images/weixin1.png" width="16" height="16"/>
+    </resources>
+</document>
