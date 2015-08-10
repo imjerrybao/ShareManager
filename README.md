@@ -35,6 +35,7 @@ pod install ShareManager
     {
         return [[ShareManager sharedManager] handleOpenURL:url];
     }
+    ````
 
 3. add URL Schemes to Info.plist
 Reference to the example
