@@ -27,9 +27,7 @@
 			<string>tencentopenapi</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>your</string>
-				<string>app</string>
-				<string>key</string>
+				<string>your_app_key</string>
 			</array>
 		</dict>
 		<dict>
@@ -39,9 +37,7 @@
 			<string>weixin</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>your</string>
-				<string>app</string>
-				<string>key</string>
+				<string>your_app_key</string>
 			</array>
 		</dict>
 	</array>

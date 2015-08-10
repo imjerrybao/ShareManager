@@ -16,27 +16,27 @@
 #import "UIColor+hex.h"
 
 // Sina Weibo
-#define kWeiboAppKey                   @""
-#define kWeiboSecret                   @""
-#define kWeiboRedirectUri              @""
+#define kWeiboAppKey                   @"your_app_key"
+#define kWeiboSecret                   @"your_app_secret"
+#define kWeiboRedirectUri              @"your_redirect_uri"
 
 // Facebook
-#define kFacebookAppKey                @""
-#define kFacebookAppSecret             @""
-#define kFacebookRedirectUri           @""
+#define kFacebookAppKey                @"your_app_key"
+#define kFacebookAppSecret             @"your_app_secret"
+#define kFacebookRedirectUri           @"your_redirect_uri"
 
 // Twitter
-#define kTwitterAppKey                 @""
-#define kTwitterAppSecret              @""
-#define kTwitterRedirectUri            @""
+#define kTwitterAppKey                 @"your_app_key"
+#define kTwitterAppSecret              @"your_app_secret"
+#define kTwitterRedirectUri            @"your_redirect_uri"
 
 // Weixin
-#define kWeixinAppKey                  @""
-#define kWeixinAppSecret               @""
+#define kWeixinAppKey                  @"your_app_key"
+#define kWeixinAppSecret               @"your_app_secret"
 
 // Qzone
-#define kQzoneKey                      @""
-#define kQzoneSecret                   @""
+#define kQzoneKey                      @"your_app_key"
+#define kQzoneSecret                   @"your_app_secret"
 
 
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width

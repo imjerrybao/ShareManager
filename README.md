@@ -38,4 +38,7 @@ pod install ShareManager
     ````
 
 3. add URL Schemes to Info.plist
+
     Reference to the example
+
+4. Replace the share platforms app key, secret, redirect uri to yours
