@@ -65,7 +65,7 @@ Support single and batch share to social platforms.
     NSString *sTitle = @"Your QQ or Weixin share title"; //Only support QQ and Weixin 
     NSString *sDesc = @"Your share content";
     NSString *sUrl = @"http://www.facebook.com";
-    NSString *sImage = [[SMImage alloc] initWithImageUrl:@"http://e.hiphotos.baidu.com/image/w%3D310/sign=af410cc1f536afc30e0c39648319eb85/6f061d950a7b0208d7fa7ee060d9f2d3572cc884.jpg"];
+    SMImage *sImage = [[SMImage alloc] initWithImageUrl:@"http://e.hiphotos.baidu.com/image/w%3D310/sign=af410cc1f536afc30e0c39648319eb85/6f061d950a7b0208d7fa7ee060d9f2d3572cc884.jpg"];
     
     [[ShareManager sharedManager] setContentWithTitle:sTitle description:sDesc image:sImage url:sUrl];
     [[ShareManager sharedManager] showShareWindow];
@@ -75,7 +75,7 @@ Support single and batch share to social platforms.
     NSString *sTitle = @"Your QQ or Weixin share title"; //Only support QQ and Weixin 
     NSString *sDesc = @"Your share content";
     NSString *sUrl = @"http://www.facebook.com";
-    NSString *sImage = [[SMImage alloc] initWithImageUrl:@"http://e.hiphotos.baidu.com/image/w%3D310/sign=af410cc1f536afc30e0c39648319eb85/6f061d950a7b0208d7fa7ee060d9f2d3572cc884.jpg"];
+    SMImage *sImage = [[SMImage alloc] initWithImageUrl:@"http://e.hiphotos.baidu.com/image/w%3D310/sign=af410cc1f536afc30e0c39648319eb85/6f061d950a7b0208d7fa7ee060d9f2d3572cc884.jpg"];
     NSMutableArray *shareList = [NSMutableArray arrayWithArray:@[@(SMPlatformWeiboOAuth), @(SMPlatformTencentQQ), @(SMPlatformWeixin), @(SMPlatformFacebookOAuth), @(SMPlatformTwitterOAuth)]];
     
     [[ShareManager sharedManager] setContentWithTitle:sTitle description:sDesc image:sImage url:sUrl];
