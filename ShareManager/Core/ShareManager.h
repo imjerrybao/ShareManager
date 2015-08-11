@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-//#import "ShareToTencentQQ.h"
-//#import "ShareToWeixin.h"
 #import "ShareToWeibo.h"
 #import "ShareToFacebook.h"
 #import "ShareToTwitter.h"
@@ -27,10 +25,6 @@ typedef void (^ShareFinishBlock)(void);
 typedef void (^ShareManagerBlock)(ShareContentState resultCode);
 
 @interface ShareManager : NSObject <ShareUIDelegate>
-
-@property (nonatomic, strong) NSString *tencentQQAppKey;
-
-@property (nonatomic, strong) NSString *weixinAppKey;
 
 @property (nonatomic, strong) NSString *weiboAppKey;
 @property (nonatomic, strong) NSString *weiboAppSecret;
@@ -55,8 +49,6 @@ typedef void (^ShareManagerBlock)(ShareContentState resultCode);
 + (ShareManager *)sharedManager;
 
 #pragma mark - 初始化分享平台
-- (void)initTencentQQWithAppKey:(NSString *)appKey appSecret:(NSString *)appSecret;
-- (void)initWexinWithAppKey:(NSString *)appKey appSecret:(NSString *)appSecret;
 - (void)initWeiboWithAppKey:(NSString *)appKey appSecret:(NSString *)appSecret redirectUri:(NSString *)redirectUri;
 - (void)initTwitterWithAppKey:(NSString *)appKey appSecret:(NSString *)appSecret redirectUri:(NSString *)redirectUri;
 - (void)initFacebookWithAppKey:(NSString *)appKey appSecret:(NSString *)appSecret redirectUri:(NSString *)redirectUri;

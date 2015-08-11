@@ -8,9 +8,9 @@
 
 #import "ShareManager.h"
 
-#define ShareImageList    @[@"sns_weibo", @"sns_qzone", @"sns_weixin", @"sns_facebook", @"sns_twitter"]
-#define ShareTitleList    @[Locale(@"sm.weibo"), Locale(@"sm.qzone"), Locale(@"sm.weixin"), Locale(@"sm.facebook"), Locale(@"sm.twitter")]
-#define ShareTagList      @[@(SMPlatformWeiboOAuth), @(SMPlatformTencentQQ), @(SMPlatformWeixin), @(SMPlatformFacebookOAuth), @(SMPlatformTwitterOAuth)]
+#define ShareImageList    @[@"sns_weibo", @"sns_facebook", @"sns_twitter"]
+#define ShareTitleList    @[Locale(@"sm.weibo"), Locale(@"sm.facebook"), Locale(@"sm.twitter")]
+#define ShareTagList      @[@(SMPlatformWeiboOAuth), @(SMPlatformFacebookOAuth), @(SMPlatformTwitterOAuth)]
 
 @interface ShareManager ()
 @property (nonatomic, assign) int index;
@@ -50,16 +50,6 @@
     _presentViewController = presentViewController;
 }
 
-//- (void)initTencentQQWithAppKey:(NSString *)appKey appSecret:(NSString *)appSecret
-//{
-//    [[ShareToTencentQQ sharedInstance] initTencentQQWithAppKey:appKey appSecret:appSecret];
-//    _tencentQQAppKey = appKey;
-//}
-//- (void)initWexinWithAppKey:(NSString *)appKey appSecret:(NSString *)appSecret
-//{
-//    [[ShareToWeixin sharedInstance] initWeixinWithAppKey:appKey appSecret:appSecret];
-//    _weixinAppKey = appKey;
-//}
 - (void)initWeiboWithAppKey:(NSString *)appKey appSecret:(NSString *)appSecret redirectUri:(NSString *)redirectUri
 {
     [[ShareToWeibo sharedInstance] initWeiboWithAppKey:appKey appSecret:appSecret redirectUri:redirectUri];
@@ -169,61 +159,6 @@
                      failBlock:(ShareManagerBlock)failBlock
 {
     switch (platform) {
-        case SMPlatformTencentQQ:
-        {
-//            [[ShareToTencentQQ sharedInstance] shareWithContent:_shareContent
-//                                                    completionBlock:^(ShareContentState resultCode) {
-//                                                        
-//                                                        if (successBlock) {
-//                                                            successBlock(resultCode);
-//                                                         }
-//                                                        [self showShareResultWithPlatform:SMPlatformTencentQQ state:ShareContentStateSuccess];
-//                                                        
-//                                                    } failedBlock:^(ShareContentState resultCode) {
-//                                                        
-//                                                        if (failBlock) {
-//                                                            failBlock(resultCode);
-//                                                        }
-//                                                        
-//                                                        if (resultCode == ShareContentStateUnInstalled) {
-//                                                            
-//                                                            [self showShareResultWithPlatform:SMPlatformTencentQQ state:ShareContentStateUnInstalled];
-//                                                            
-//                                                        }else{
-//                                                            
-//                                                            [self showShareResultWithPlatform:SMPlatformTencentQQ state:ShareContentStateFail];
-//                                                            
-//                                                        }
-//                                                    }];
-        }
-            break;
-        case SMPlatformWeixin:
-        {
-//            [[ShareToWeixin sharedInstance] shareWithContent:_shareContent
-//                                                           scene:WXSceneTypeTimeline
-//                                                 completionBlock:^(ShareContentState resultCode) {
-//                                                     
-//                                                     if (successBlock) {
-//                                                         successBlock(resultCode);
-//                                                     }
-//                                                     [self showShareResultWithPlatform:SMPlatformWeixin state:ShareContentStateSuccess];
-//                                                     
-//                                                 } failedBlock:^(ShareContentState resultCode) {
-//                                                     
-//                                                     if (failBlock) {
-//                                                         failBlock(resultCode);
-//                                                     }
-//                                                     if (resultCode == ShareContentStateUnInstalled) {
-//                                                         
-//                                                         [self showShareResultWithPlatform:SMPlatformWeixin state:ShareContentStateUnInstalled];
-//                                                         
-//                                                     }else{
-//                                                         
-//                                                         [self showShareResultWithPlatform:SMPlatformWeixin state:ShareContentStateFail];
-//                                                     }
-//                                                 }];
-        }
-            break;
         case SMPlatformWeibo:
         case SMPlatformWeiboOAuth:
         {
@@ -346,36 +281,6 @@
                                              }];
         }
             break;
-        case SMPlatformTencentQQ:
-        {
-//            [[ShareToTencentQQ sharedInstance] obtainAccessTokenWithCompletionBlock:^{
-//                NSLog(@"obtain access token success");
-//                if (successBlock) {
-//                    successBlock();
-//                }
-//            } failedBlock:^{
-//                NSLog(@"obtain access token fail");
-//                if (failBlock) {
-//                    failBlock();
-//                }
-//            }];
-        }
-            break;
-        case SMPlatformWeixin:
-        {
-//            [[ShareToWeixin sharedInstance] obtainAccessTokenWithCompletionBlock:^{
-//                NSLog(@"obtain access token success");
-//                if (successBlock) {
-//                    successBlock();
-//                }
-//            } failedBlock:^{
-//                NSLog(@"obtain access token fail");
-//                if (failBlock) {
-//                    failBlock();
-//                }
-//            }];
-        }
-            break;
         default:
             break;
     }
@@ -435,28 +340,6 @@
                 title = Locale(@"sm.shareto.weibo.fail");
             }
             break;
-        case SMPlatformWeixin:
-            if (state == ShareContentStateSuccess) {
-                title = Locale(@"sm.shareto.weixin.success");
-            } else {
-                if (state == ShareContentStateUnInstalled) {
-                    title = Locale(@"sm.shareto.weixin.notinstall");
-                } else {
-                    title = Locale(@"sm.shareto.weixin.fail");
-                }
-            }
-            break;
-        case SMPlatformTencentQQ:
-            if (state == ShareContentStateSuccess) {
-                title = Locale(@"sm.shareto.qzone.success");
-            } else {
-                if (state == ShareContentStateUnInstalled) {
-                    title = Locale(@"sm.shareto.qzone.notinstall");
-                } else {
-                    title = Locale(@"sm.shareto.qzone.fail");
-                }
-            }
-            break;
         default:
             break;
     }
@@ -478,16 +361,6 @@
 + (BOOL)isAuthPlatform:(SMPlatform)platform
 {
     switch (platform) {
-        case SMPlatformTencentQQ:
-//            if (![NSString isBlankString:[[NSUserDefaults standardUserDefaults] valueForKey:TENCENTQQ_ACCESS_TOKEN]]) {
-//                return YES;
-//            }
-            break;
-        case SMPlatformWeixin:
-//            if (![NSString isBlankString:[[NSUserDefaults standardUserDefaults] valueForKey:WEIXIN_ACCESS_TOKEN]]) {
-//                return YES;
-//            }
-            break;
         case SMPlatformWeibo:
         case SMPlatformWeiboOAuth:
             if (![NSString isBlankString:[[NSUserDefaults standardUserDefaults] valueForKey:WEIBO_ACCESS_TOKEN]]) {
