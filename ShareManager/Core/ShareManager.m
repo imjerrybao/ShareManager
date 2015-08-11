@@ -55,11 +55,11 @@
     [[ShareToTencentQQ sharedInstance] initTencentQQWithAppKey:appKey appSecret:appSecret];
     _tencentQQAppKey = appKey;
 }
-- (void)initWexinWithAppKey:(NSString *)appKey appSecret:(NSString *)appSecret
-{
-    [[ShareToWeixin sharedInstance] initWeixinWithAppKey:appKey appSecret:appSecret];
-    _weixinAppKey = appKey;
-}
+//- (void)initWexinWithAppKey:(NSString *)appKey appSecret:(NSString *)appSecret
+//{
+//    [[ShareToWeixin sharedInstance] initWeixinWithAppKey:appKey appSecret:appSecret];
+//    _weixinAppKey = appKey;
+//}
 - (void)initWeiboWithAppKey:(NSString *)appKey appSecret:(NSString *)appSecret redirectUri:(NSString *)redirectUri
 {
     [[ShareToWeibo sharedInstance] initWeiboWithAppKey:appKey appSecret:appSecret redirectUri:redirectUri];
@@ -91,10 +91,10 @@
         return [[ShareToTencentQQ sharedInstance] handleOpenURL:url];
     }
     //weixin
-    r = [url.absoluteString rangeOfString:_weixinAppKey];
-    if (r.location != NSNotFound) {
-        return [[ShareToWeixin sharedInstance] handleOpenURL:url];
-    }
+//    r = [url.absoluteString rangeOfString:_weixinAppKey];
+//    if (r.location != NSNotFound) {
+//        return [[ShareToWeixin sharedInstance] handleOpenURL:url];
+//    }
     return NO;
 }
 
@@ -199,29 +199,29 @@
             break;
         case SMPlatformWeixin:
         {
-            [[ShareToWeixin sharedInstance] shareWithContent:_shareContent
-                                                           scene:WXSceneTypeTimeline
-                                                 completionBlock:^(ShareContentState resultCode) {
-                                                     
-                                                     if (successBlock) {
-                                                         successBlock(resultCode);
-                                                     }
-                                                     [self showShareResultWithPlatform:SMPlatformWeixin state:ShareContentStateSuccess];
-                                                     
-                                                 } failedBlock:^(ShareContentState resultCode) {
-                                                     
-                                                     if (failBlock) {
-                                                         failBlock(resultCode);
-                                                     }
-                                                     if (resultCode == ShareContentStateUnInstalled) {
-                                                         
-                                                         [self showShareResultWithPlatform:SMPlatformWeixin state:ShareContentStateUnInstalled];
-                                                         
-                                                     }else{
-                                                         
-                                                         [self showShareResultWithPlatform:SMPlatformWeixin state:ShareContentStateFail];
-                                                     }
-                                                 }];
+//            [[ShareToWeixin sharedInstance] shareWithContent:_shareContent
+//                                                           scene:WXSceneTypeTimeline
+//                                                 completionBlock:^(ShareContentState resultCode) {
+//                                                     
+//                                                     if (successBlock) {
+//                                                         successBlock(resultCode);
+//                                                     }
+//                                                     [self showShareResultWithPlatform:SMPlatformWeixin state:ShareContentStateSuccess];
+//                                                     
+//                                                 } failedBlock:^(ShareContentState resultCode) {
+//                                                     
+//                                                     if (failBlock) {
+//                                                         failBlock(resultCode);
+//                                                     }
+//                                                     if (resultCode == ShareContentStateUnInstalled) {
+//                                                         
+//                                                         [self showShareResultWithPlatform:SMPlatformWeixin state:ShareContentStateUnInstalled];
+//                                                         
+//                                                     }else{
+//                                                         
+//                                                         [self showShareResultWithPlatform:SMPlatformWeixin state:ShareContentStateFail];
+//                                                     }
+//                                                 }];
         }
             break;
         case SMPlatformWeibo:
@@ -363,17 +363,17 @@
             break;
         case SMPlatformWeixin:
         {
-            [[ShareToWeixin sharedInstance] obtainAccessTokenWithCompletionBlock:^{
-                NSLog(@"obtain access token success");
-                if (successBlock) {
-                    successBlock();
-                }
-            } failedBlock:^{
-                NSLog(@"obtain access token fail");
-                if (failBlock) {
-                    failBlock();
-                }
-            }];
+//            [[ShareToWeixin sharedInstance] obtainAccessTokenWithCompletionBlock:^{
+//                NSLog(@"obtain access token success");
+//                if (successBlock) {
+//                    successBlock();
+//                }
+//            } failedBlock:^{
+//                NSLog(@"obtain access token fail");
+//                if (failBlock) {
+//                    failBlock();
+//                }
+//            }];
         }
             break;
         default:
@@ -484,9 +484,9 @@
             }
             break;
         case SMPlatformWeixin:
-            if (![NSString isBlankString:[[NSUserDefaults standardUserDefaults] valueForKey:WEIXIN_ACCESS_TOKEN]]) {
-                return YES;
-            }
+//            if (![NSString isBlankString:[[NSUserDefaults standardUserDefaults] valueForKey:WEIXIN_ACCESS_TOKEN]]) {
+//                return YES;
+//            }
             break;
         case SMPlatformWeibo:
         case SMPlatformWeiboOAuth:

@@ -27,7 +27,7 @@
 - (void)initSharePlatform
 {
     [[ShareManager sharedManager] initTencentQQWithAppKey:kQzoneKey appSecret:kQzoneSecret];
-    [[ShareManager sharedManager] initWexinWithAppKey:kWeixinAppKey appSecret:kWeixinAppSecret];
+//    [[ShareManager sharedManager] initWexinWithAppKey:kWeixinAppKey appSecret:kWeixinAppSecret];
     [[ShareManager sharedManager] initWeiboWithAppKey:kWeiboAppKey appSecret:kWeiboSecret redirectUri:kWeiboRedirectUri];
     [[ShareManager sharedManager] initTwitterWithAppKey:kTwitterAppKey appSecret:kTwitterAppSecret redirectUri:kTwitterRedirectUri];
     [[ShareManager sharedManager] initFacebookWithAppKey:kFacebookAppKey appSecret:kFacebookAppSecret redirectUri:kFacebookRedirectUri];
