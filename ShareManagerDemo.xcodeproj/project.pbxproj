@@ -27,7 +27,6 @@
 		3BF638531B789ABB002DFC78 /* ShareManager.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 3BF638511B789ABB002DFC78 /* ShareManager.podspec */; };
 		3BF6386D1B789F26002DFC78 /* ShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF638561B789F26002DFC78 /* ShareManager.m */; };
 		3BF6386E1B789F26002DFC78 /* ShareToFacebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF638581B789F26002DFC78 /* ShareToFacebook.m */; };
-		3BF6386F1B789F26002DFC78 /* ShareToTencentQQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF6385A1B789F26002DFC78 /* ShareToTencentQQ.m */; };
 		3BF638701B789F26002DFC78 /* ShareToTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF6385C1B789F26002DFC78 /* ShareToTwitter.m */; };
 		3BF638711B789F26002DFC78 /* ShareToWeibo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF6385E1B789F26002DFC78 /* ShareToWeibo.m */; };
 		3BF638731B789F26002DFC78 /* ShareUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF638621B789F26002DFC78 /* ShareUI.m */; };
@@ -80,8 +79,6 @@
 		3BF638561B789F26002DFC78 /* ShareManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareManager.m; sourceTree = "<group>"; };
 		3BF638571B789F26002DFC78 /* ShareToFacebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareToFacebook.h; sourceTree = "<group>"; };
 		3BF638581B789F26002DFC78 /* ShareToFacebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareToFacebook.m; sourceTree = "<group>"; };
-		3BF638591B789F26002DFC78 /* ShareToTencentQQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareToTencentQQ.h; sourceTree = "<group>"; };
-		3BF6385A1B789F26002DFC78 /* ShareToTencentQQ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareToTencentQQ.m; sourceTree = "<group>"; };
 		3BF6385B1B789F26002DFC78 /* ShareToTwitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareToTwitter.h; sourceTree = "<group>"; };
 		3BF6385C1B789F26002DFC78 /* ShareToTwitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareToTwitter.m; sourceTree = "<group>"; };
 		3BF6385D1B789F26002DFC78 /* ShareToWeibo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareToWeibo.h; sourceTree = "<group>"; };
@@ -224,8 +221,6 @@
 				3BF638561B789F26002DFC78 /* ShareManager.m */,
 				3BF638571B789F26002DFC78 /* ShareToFacebook.h */,
 				3BF638581B789F26002DFC78 /* ShareToFacebook.m */,
-				3BF638591B789F26002DFC78 /* ShareToTencentQQ.h */,
-				3BF6385A1B789F26002DFC78 /* ShareToTencentQQ.m */,
 				3BF6385B1B789F26002DFC78 /* ShareToTwitter.h */,
 				3BF6385C1B789F26002DFC78 /* ShareToTwitter.m */,
 				3BF6385D1B789F26002DFC78 /* ShareToWeibo.h */,
@@ -389,7 +384,6 @@
 				3B8311C21B72050F00CF6435 /* ViewController.m in Sources */,
 				3BF638741B789F26002DFC78 /* SMContent.m in Sources */,
 				3BF638711B789F26002DFC78 /* ShareToWeibo.m in Sources */,
-				3BF6386F1B789F26002DFC78 /* ShareToTencentQQ.m in Sources */,
 				3BF638731B789F26002DFC78 /* ShareUI.m in Sources */,
 				3B8313981B72129A00CF6435 /* NSString+util.m in Sources */,
 				3BF638781B789F26002DFC78 /* SMWebViewController.m in Sources */,

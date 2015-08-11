@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "ShareToTencentQQ.h"
+//#import "ShareToTencentQQ.h"
 //#import "ShareToWeixin.h"
 #import "ShareToWeibo.h"
 #import "ShareToFacebook.h"

@@ -50,11 +50,11 @@
     _presentViewController = presentViewController;
 }
 
-- (void)initTencentQQWithAppKey:(NSString *)appKey appSecret:(NSString *)appSecret
-{
-    [[ShareToTencentQQ sharedInstance] initTencentQQWithAppKey:appKey appSecret:appSecret];
-    _tencentQQAppKey = appKey;
-}
+//- (void)initTencentQQWithAppKey:(NSString *)appKey appSecret:(NSString *)appSecret
+//{
+//    [[ShareToTencentQQ sharedInstance] initTencentQQWithAppKey:appKey appSecret:appSecret];
+//    _tencentQQAppKey = appKey;
+//}
 //- (void)initWexinWithAppKey:(NSString *)appKey appSecret:(NSString *)appSecret
 //{
 //    [[ShareToWeixin sharedInstance] initWeixinWithAppKey:appKey appSecret:appSecret];
@@ -85,11 +85,11 @@
 -(BOOL) handleOpenURL:(NSURL *) url
 {
     NSLog(@"handleOpenURL: %@",url.absoluteString);
-    //tencentQQ
-    NSRange r = [url.absoluteString rangeOfString:_tencentQQAppKey];
-    if (r.location != NSNotFound) {
-        return [[ShareToTencentQQ sharedInstance] handleOpenURL:url];
-    }
+//    //tencentQQ
+//    NSRange r = [url.absoluteString rangeOfString:_tencentQQAppKey];
+//    if (r.location != NSNotFound) {
+//        return [[ShareToTencentQQ sharedInstance] handleOpenURL:url];
+//    }
     //weixin
 //    r = [url.absoluteString rangeOfString:_weixinAppKey];
 //    if (r.location != NSNotFound) {
@@ -171,30 +171,30 @@
     switch (platform) {
         case SMPlatformTencentQQ:
         {
-            [[ShareToTencentQQ sharedInstance] shareWithContent:_shareContent
-                                                    completionBlock:^(ShareContentState resultCode) {
-                                                        
-                                                        if (successBlock) {
-                                                            successBlock(resultCode);
-                                                         }
-                                                        [self showShareResultWithPlatform:SMPlatformTencentQQ state:ShareContentStateSuccess];
-                                                        
-                                                    } failedBlock:^(ShareContentState resultCode) {
-                                                        
-                                                        if (failBlock) {
-                                                            failBlock(resultCode);
-                                                        }
-                                                        
-                                                        if (resultCode == ShareContentStateUnInstalled) {
-                                                            
-                                                            [self showShareResultWithPlatform:SMPlatformTencentQQ state:ShareContentStateUnInstalled];
-                                                            
-                                                        }else{
-                                                            
-                                                            [self showShareResultWithPlatform:SMPlatformTencentQQ state:ShareContentStateFail];
-                                                            
-                                                        }
-                                                    }];
+//            [[ShareToTencentQQ sharedInstance] shareWithContent:_shareContent
+//                                                    completionBlock:^(ShareContentState resultCode) {
+//                                                        
+//                                                        if (successBlock) {
+//                                                            successBlock(resultCode);
+//                                                         }
+//                                                        [self showShareResultWithPlatform:SMPlatformTencentQQ state:ShareContentStateSuccess];
+//                                                        
+//                                                    } failedBlock:^(ShareContentState resultCode) {
+//                                                        
+//                                                        if (failBlock) {
+//                                                            failBlock(resultCode);
+//                                                        }
+//                                                        
+//                                                        if (resultCode == ShareContentStateUnInstalled) {
+//                                                            
+//                                                            [self showShareResultWithPlatform:SMPlatformTencentQQ state:ShareContentStateUnInstalled];
+//                                                            
+//                                                        }else{
+//                                                            
+//                                                            [self showShareResultWithPlatform:SMPlatformTencentQQ state:ShareContentStateFail];
+//                                                            
+//                                                        }
+//                                                    }];
         }
             break;
         case SMPlatformWeixin:
@@ -348,17 +348,17 @@
             break;
         case SMPlatformTencentQQ:
         {
-            [[ShareToTencentQQ sharedInstance] obtainAccessTokenWithCompletionBlock:^{
-                NSLog(@"obtain access token success");
-                if (successBlock) {
-                    successBlock();
-                }
-            } failedBlock:^{
-                NSLog(@"obtain access token fail");
-                if (failBlock) {
-                    failBlock();
-                }
-            }];
+//            [[ShareToTencentQQ sharedInstance] obtainAccessTokenWithCompletionBlock:^{
+//                NSLog(@"obtain access token success");
+//                if (successBlock) {
+//                    successBlock();
+//                }
+//            } failedBlock:^{
+//                NSLog(@"obtain access token fail");
+//                if (failBlock) {
+//                    failBlock();
+//                }
+//            }];
         }
             break;
         case SMPlatformWeixin:
@@ -479,9 +479,9 @@
 {
     switch (platform) {
         case SMPlatformTencentQQ:
-            if (![NSString isBlankString:[[NSUserDefaults standardUserDefaults] valueForKey:TENCENTQQ_ACCESS_TOKEN]]) {
-                return YES;
-            }
+//            if (![NSString isBlankString:[[NSUserDefaults standardUserDefaults] valueForKey:TENCENTQQ_ACCESS_TOKEN]]) {
+//                return YES;
+//            }
             break;
         case SMPlatformWeixin:
 //            if (![NSString isBlankString:[[NSUserDefaults standardUserDefaults] valueForKey:WEIXIN_ACCESS_TOKEN]]) {
