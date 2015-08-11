@@ -72,6 +72,7 @@
             } else {
                 [_facebookBtn setImage:[UIImage imageNamed:@"SMResources.bundle/images/facebook1"] forState:UIControlStateNormal];
                 _enableFacebook = !_enableFacebook;
+                [_shareList removeObject:@(SMPlatformFacebookOAuth)];
             }
         }
             break;
@@ -88,6 +89,7 @@
             } else {
                 [_twitterBtn setImage:[UIImage imageNamed:@"SMResources.bundle/images/twitter1"] forState:UIControlStateNormal];
                 _enableTwitter = !_enableTwitter;
+                [_shareList removeObject:@(SMPlatformTwitterOAuth)];
             }
         }
             break;
@@ -104,6 +106,8 @@
                 }];
             } else {
                 [_weiboBtn setImage:[UIImage imageNamed:@"SMResources.bundle/images/weibo1"] forState:UIControlStateNormal];
+                _enableWeibo = !_enableWeibo;
+                [_shareList removeObject:@(SMPlatformWeiboOAuth)];
             }
         }
             break;
@@ -114,6 +118,7 @@
                 [_shareList addObject:@(SMPlatformWeixin)];
             } else {
                 [_weixinBtn setImage:[UIImage imageNamed:@"SMResources.bundle/images/weixin1"] forState:UIControlStateNormal];
+                [_shareList removeObject:@(SMPlatformWeixin)];
             }
             _enableWeixin = !_enableWeixin;
         }
@@ -125,6 +130,7 @@
                 [_shareList addObject:@(SMPlatformTencentQQ)];
             } else {
                 [_qzoneBtn setImage:[UIImage imageNamed:@"SMResources.bundle/images/qzone1"] forState:UIControlStateNormal];
+                [_shareList removeObject:@(SMPlatformTencentQQ)];
             }
             _enableQQ = !_enableQQ;
         }

@@ -19,10 +19,10 @@
 		3B8313981B72129A00CF6435 /* NSString+util.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8313971B72129A00CF6435 /* NSString+util.m */; };
 		3B83139B1B72144B00CF6435 /* UIView+size.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B83139A1B72144B00CF6435 /* UIView+size.m */; };
 		3B83139E1B72151E00CF6435 /* UIColor+hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B83139D1B72151E00CF6435 /* UIColor+hex.m */; };
+		3BC5EE761B79C58F00FE1AC9 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BD55C0D1B743FF3006428ED /* libc++.dylib */; };
 		3BD55C081B743F4C006428ED /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BD55C071B743F4C006428ED /* SystemConfiguration.framework */; };
 		3BD55C0A1B743F96006428ED /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BD55C091B743F96006428ED /* libz.dylib */; };
 		3BD55C0C1B743F9B006428ED /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BD55C0B1B743F9B006428ED /* libsqlite3.0.dylib */; };
-		3BD55C0E1B743FF3006428ED /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BD55C0D1B743FF3006428ED /* libc++.dylib */; };
 		3BF638521B789ABB002DFC78 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 3BF638501B789ABB002DFC78 /* README.md */; };
 		3BF638531B789ABB002DFC78 /* ShareManager.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 3BF638511B789ABB002DFC78 /* ShareManager.podspec */; };
 		3BF6386D1B789F26002DFC78 /* ShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF638561B789F26002DFC78 /* ShareManager.m */; };
@@ -110,7 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BD55C0E1B743FF3006428ED /* libc++.dylib in Frameworks */,
+				3BC5EE761B79C58F00FE1AC9 /* libc++.dylib in Frameworks */,
 				3BD55C0C1B743F9B006428ED /* libsqlite3.0.dylib in Frameworks */,
 				3BD55C0A1B743F96006428ED /* libz.dylib in Frameworks */,
 				3BD55C081B743F4C006428ED /* SystemConfiguration.framework in Frameworks */,
@@ -527,12 +527,11 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/ShareManager/lib/WeChatSDK_1.5",
 					"$(PROJECT_DIR)/ShareManagerDemo/ShareManager/lib/WeChatSDK",
 					"$(PROJECT_DIR)/ShareManager/lib/WeChatSDK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALID_ARCHS = "arm64 armv7 armv7s";
+				VALID_ARCHS = "arm64 armv7 armv7s i386 x86_64";
 			};
 			name = Debug;
 		};
@@ -553,12 +552,11 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/ShareManager/lib/WeChatSDK_1.5",
 					"$(PROJECT_DIR)/ShareManagerDemo/ShareManager/lib/WeChatSDK",
 					"$(PROJECT_DIR)/ShareManager/lib/WeChatSDK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALID_ARCHS = "arm64 armv7 armv7s";
+				VALID_ARCHS = "arm64 armv7 armv7s i386 x86_64";
 			};
 			name = Release;
 		};
