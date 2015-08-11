@@ -32,10 +32,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    _sTitle = @"这是qq和微信的标题"; //只对qq和微信有效
-    _sDesc = @"这是内容";
-    _sUrl = @"http://www.baidu.com";
-    _sImage = [[SMImage alloc] initWithImageUrl:@"https://www.baidu.com/img/bdlogo.png"];
+    _sTitle = @"Your QQ or Weixin share title"; //Only support QQ and Weixin
+    _sDesc = @"Your share content";
+    _sUrl = @"http://www.facebook.com";
+    _sImage = [[SMImage alloc] initWithImageUrl:@"http://e.hiphotos.baidu.com/image/w%3D310/sign=af410cc1f536afc30e0c39648319eb85/6f061d950a7b0208d7fa7ee060d9f2d3572cc884.jpg"];
     _shareList = [NSMutableArray array];
     
     _facebookBtn.tag = 1000+SMPlatformFacebookOAuth;
