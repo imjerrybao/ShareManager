@@ -33,7 +33,11 @@
 
 <pre><code>platform :ios, '7.0'
 
+target 'Your_Target' do
+
 pod 'ShareManager', :git =&gt; 'https://github.com/imjerrybao/ShareManager.git'
+
+end
 </code></pre>
 </li>
 <li>
@@ -51,6 +55,8 @@ pod 'ShareManager', :git =&gt; 'https://github.com/imjerrybao/ShareManager.git'
 
 - (<span class="pl-k">void</span>)initSharePlatform
 {
+# Replace the share platforms app key, secret and redirect uri to yours
+
     [[ShareManager <span class="pl-c1">sharedManager</span>] <span class="pl-c1">initTencentQQWithAppKey:</span><span class="pl-c1">kQzoneKey</span> <span class="pl-c1">appSecret:</span><span class="pl-c1">kQzoneSecret</span>];
     [[ShareManager <span class="pl-c1">sharedManager</span>] <span class="pl-c1">initWexinWithAppKey:</span><span class="pl-c1">kWeixinAppKey</span> <span class="pl-c1">appSecret:</span><span class="pl-c1">kWeixinAppSecret</span>];
     [[ShareManager <span class="pl-c1">sharedManager</span>] <span class="pl-c1">initWeiboWithAppKey:</span><span class="pl-c1">kWeiboAppKey</span> <span class="pl-c1">appSecret:</span><span class="pl-c1">kWeiboSecret</span> <span class="pl-c1">redirectUri:</span><span class="pl-c1">kWeiboRedirectUri</span>];
@@ -73,7 +79,6 @@ pod 'ShareManager', :git =&gt; 'https://github.com/imjerrybao/ShareManager.git'
 
 <p>Reference to the example</p>
 </li>
-<li><p>Replace the share platforms app key, secret and redirect uri to yours in file SMConfig.m</p></li>
 </ol>
 
       <footer class="site-footer">
