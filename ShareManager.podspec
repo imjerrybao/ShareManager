@@ -14,6 +14,7 @@ Pod::Spec.new do |s|
   s.ios.vendored_frameworks = 'ShareManager/lib/TencentQQ/TencentOpenAPI.framework'
   s.libraries               = 'c++', 'sqlite3.0', 'z'
   s.ios.vendored_library    = 'ShareManager/lib/WeChatSDK/libWeChatSDK.a'
+  s.platform                = :ios, '7.0'
   s.requires_arc            = true
   s.dependency              'BlocksKit', '~> 2.2.5'
   s.dependency              'MBProgressHUD', '~> 0.9.1'

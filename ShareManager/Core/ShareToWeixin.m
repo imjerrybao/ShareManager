@@ -30,11 +30,16 @@
 {
     _appKey = appKey;
     _appSecret = appSecret;
+#if !TARGET_IPHONE_SIMULATOR
     [WXApi registerApp:_appKey];
+#endif
 }
 -(BOOL) handleOpenURL:(NSURL *) url
 {
+#if !TARGET_IPHONE_SIMULATOR
     return [WXApi handleOpenURL:url delegate:self];
+#endif
+    return NO;
 }
 
 #pragma mark - 获取绑定授权
@@ -56,6 +61,7 @@
     [self setFailedBlock:aFailedBlock];
     _content = content;
     
+#if !TARGET_IPHONE_SIMULATOR
     if (![WXApi isWXAppInstalled]) {
         if(_failureBlock){
             _failureBlock(ShareContentStateUnInstalled);
@@ -88,6 +94,7 @@
     [self setCompletionBlock:aCompletionBlock];
     
     [WXApi sendReq:req];
+#endif
 }
 
 #pragma mark - WXApiDelegate
@@ -97,6 +104,7 @@
 }
 -(void) onResp:(BaseResp*)resp
 {
+#if !TARGET_IPHONE_SIMULATOR
     if([resp isKindOfClass:[SendMessageToWXResp class]])
     {
         if (resp.errCode == WXSuccess) {
@@ -112,7 +120,7 @@
         _completionBlock = nil;
         _failureBlock = nil;
     }
-    
+#endif
     
     /*
      ErrCode ERR_OK = 0(用户同意)
@@ -168,10 +176,12 @@
 #pragma mark - auth action
 - (void)sendAuthRequest
 {
+#if !TARGET_IPHONE_SIMULATOR
     SendAuthReq* req =[[SendAuthReq alloc ] init];
     req.scope = @"snsapi_userinfo,snsapi_base";
     req.state = @"0744" ;
     [WXApi sendReq:req];
+#endif
 }
 
 - (void)getAccessToken

@@ -43,7 +43,6 @@
     _weiboBtn.tag = 1000+SMPlatformWeiboOAuth;
     _weixinBtn.tag = 1000+SMPlatformWeixin;
     _qzoneBtn.tag = 1000+SMPlatformTencentQQ;
-
 }
 
 - (void)didReceiveMemoryWarning {
