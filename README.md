@@ -1,6 +1,10 @@
 # ShareManager
 A SNS Platform Share Manager for ios, support Facebook, Twitter, QQ and Weixin.
 
+# PreView
+<img src="https://raw.githubusercontent.com/imjerrybao/ShareManager/master/ReadmeImages/s1.jpg" alt="Drawing" width="375px" />
+<img src="https://raw.githubusercontent.com/imjerrybao/ShareManager/master/ReadmeImages/s2.jpg" alt="Drawing" width="375px" />
+
 # How To Integrate to Your Project
 1. Install via pod
 
