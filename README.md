@@ -1,5 +1,6 @@
 # ShareManager
 A SNS Platform Share Manager for ios, support Facebook, Twitter, QQ and Weixin.
+Support single and batch share to social platforms.
 
 # PreView
 <img src="https://raw.githubusercontent.com/imjerrybao/ShareManager/master/ReadmeImages/s1.jpg" alt="Drawing" width="320px" />
