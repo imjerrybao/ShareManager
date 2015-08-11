@@ -5,7 +5,7 @@ A SNS Platform Share Manager for ios, support Facebook, Twitter, QQ and Weixin.
 1. Install via pod
 
     ````
-    pod 'ShareManager'
+    pod 'ShareManager', :git => 'https://github.com/imjerrybao/ShareManager.git'
     ````
 
 2. AppDelegate add below code
