@@ -7,7 +7,11 @@ A SNS Platform Share Manager for ios, support Facebook, Twitter, QQ and Weixin.
     ````
     platform :ios, '7.0'
     
+    target Your_Target do
+    
     pod 'ShareManager', :git => 'https://github.com/imjerrybao/ShareManager.git'
+    
+    end
     ````
 
 2. AppDelegate add below code
@@ -24,6 +28,8 @@ A SNS Platform Share Manager for ios, support Facebook, Twitter, QQ and Weixin.
 
     - (void)initSharePlatform
     {
+    # Replace the share platforms app key, secret and redirect uri to yours
+    
         [[ShareManager sharedManager] initTencentQQWithAppKey:kQzoneKey appSecret:kQzoneSecret];
         [[ShareManager sharedManager] initWexinWithAppKey:kWeixinAppKey appSecret:kWeixinAppSecret];
         [[ShareManager sharedManager] initWeiboWithAppKey:kWeiboAppKey appSecret:kWeiboSecret redirectUri:kWeiboRedirectUri];
@@ -46,4 +52,3 @@ A SNS Platform Share Manager for ios, support Facebook, Twitter, QQ and Weixin.
 
     Reference to the example
 
-4. Replace the share platforms app key, secret and redirect uri to yours in file SMConfig.m
