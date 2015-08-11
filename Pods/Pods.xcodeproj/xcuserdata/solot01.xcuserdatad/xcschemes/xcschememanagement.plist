@@ -14,6 +14,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>OAuthConsumer-OAuthConsumer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>OAuthConsumer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0D204C3C28C3BB3E20A79228559722E7</key>
+		<key>76D38CB1DFE0E302125EF8CA417A6B28</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7D609B2FD546A6E4F5831B19BB825DD4</key>
+		<key>915041E6A96F40B31C7838B916E48AE9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9AFE1EA0B14633861FAE98EDDC90BC53</key>
+		<key>A97D484E5D550EC6A334770B0792D1CD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AA2755A782CBCA6F9F211CA61F6535D7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EB72CA2887BA25500279AED3430890DD</key>
 		<dict>
 			<key>primary</key>
 			<true/>

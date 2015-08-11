@@ -22,7 +22,7 @@
 		<key>04AA1A2AE3F7F1DBDBAB14B74F7A688BD0CFCB0E</key>
 		<string>..</string>
 		<key>47E35372B5D8DD8D71E8EAB3B730C66F208092E5</key>
-		<string>../../ShareManagerDemo</string>
+		<string>..Demo</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/imjerrybao/ShareManager.git</string>

@@ -67,7 +67,7 @@
     _webView = _webViewController.webView;
     _webView.delegate = self;
     
-    _consumer = [[OAConsumer alloc] initWithKey:_appKey secret:_appSecret realm:nil];
+    _consumer = [[OAConsumer alloc] initWithKey:_appKey secret:_appSecret];
     NSURL *requestTokenUrl = requestTokenUrl = [NSURL URLWithString:WEIBO_AUTHORIZE_URL];
     OAMutableURLRequest *requestTokenRequest = [[OAMutableURLRequest alloc] initWithURL:requestTokenUrl
                                                                                consumer:_consumer

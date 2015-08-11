@@ -34,7 +34,7 @@
     _appKey = appKey;
     _appSecret = appSecret;
     _redirectUri = redirectUri;
-    _consumer = [[OAConsumer alloc] initWithKey:_appKey secret:_appSecret realm:nil];
+    _consumer = [[OAConsumer alloc] initWithKey:_appKey secret:_appSecret];
 }
 - (void)setCompletionBlock:(ShareTwitterBlock)aCompletionBlock{
     _completionBlock = [aCompletionBlock copy];

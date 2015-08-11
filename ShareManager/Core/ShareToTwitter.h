@@ -8,7 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "ShareManager.h"
-#import "OAuthConsumer.h"
+#import <oauthconsumer/OAConsumer.h>
+#import <oauthconsumer/OARequestParameter.h>
+#import <oauthconsumer/OAServiceTicket.h>
+#import <oauthconsumer/OADataFetcher.h>
+#import <sys/types.h>
 #import "SMContent.h"
 #import "SMWebViewController.h"
 

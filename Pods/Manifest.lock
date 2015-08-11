@@ -15,13 +15,16 @@ PODS:
     - BlocksKit/Core
     - BlocksKit/DynamicDelegate
   - MBProgressHUD (0.9.1)
+  - OAuthConsumer (1.0.3)
 
 DEPENDENCIES:
   - BlocksKit (~> 2.2.5)
   - MBProgressHUD (~> 0.9.1)
+  - OAuthConsumer
 
 SPEC CHECKSUMS:
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
+  OAuthConsumer: 9e99725d1d58d076ed13e6010a2d74f82e25e4cc
 
 COCOAPODS: 0.38.2
