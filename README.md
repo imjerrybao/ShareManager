@@ -57,7 +57,7 @@ Support single and batch share to social platforms.
 
 3. Add URL Schemes to Info.plist
 
-    Reference to the example
+    Reference to the example's Info.plist
     
 # Usage
 1. Single Share
