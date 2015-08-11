@@ -6,6 +6,7 @@ A SNS Platform Share Manager for ios, support Facebook, Twitter, QQ and Weixin.
 
     ````
     platform :ios, '7.0'
+    
     pod 'ShareManager', :git => 'https://github.com/imjerrybao/ShareManager.git'
     ````
 
