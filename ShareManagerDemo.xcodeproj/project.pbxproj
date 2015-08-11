@@ -23,8 +23,6 @@
 		3BD55C081B743F4C006428ED /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BD55C071B743F4C006428ED /* SystemConfiguration.framework */; };
 		3BD55C0A1B743F96006428ED /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BD55C091B743F96006428ED /* libz.dylib */; };
 		3BD55C0C1B743F9B006428ED /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BD55C0B1B743F9B006428ED /* libsqlite3.0.dylib */; };
-		3BF638521B789ABB002DFC78 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 3BF638501B789ABB002DFC78 /* README.md */; };
-		3BF638531B789ABB002DFC78 /* ShareManager.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 3BF638511B789ABB002DFC78 /* ShareManager.podspec */; };
 		3BF6386D1B789F26002DFC78 /* ShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF638561B789F26002DFC78 /* ShareManager.m */; };
 		3BF6386E1B789F26002DFC78 /* ShareToFacebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF638581B789F26002DFC78 /* ShareToFacebook.m */; };
 		3BF6386F1B789F26002DFC78 /* ShareToTencentQQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF6385A1B789F26002DFC78 /* ShareToTencentQQ.m */; };
@@ -68,6 +66,7 @@
 		3B8313A31B7217C100CF6435 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		3B8313A51B7217CF00CF6435 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		3B8313A71B7217EC00CF6435 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		3BC5EEDB1B79F17300FE1AC9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		3BD55C011B743F02006428ED /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3BD55C031B743F1B006428ED /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		3BD55C051B743F43006428ED /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -75,8 +74,6 @@
 		3BD55C091B743F96006428ED /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		3BD55C0B1B743F9B006428ED /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		3BD55C0D1B743FF3006428ED /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
-		3BF638501B789ABB002DFC78 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		3BF638511B789ABB002DFC78 /* ShareManager.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ShareManager.podspec; sourceTree = "<group>"; };
 		3BF638551B789F26002DFC78 /* ShareManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareManager.h; sourceTree = "<group>"; };
 		3BF638561B789F26002DFC78 /* ShareManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareManager.m; sourceTree = "<group>"; };
 		3BF638571B789F26002DFC78 /* ShareToFacebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareToFacebook.h; sourceTree = "<group>"; };
@@ -126,8 +123,6 @@
 		3B8311AD1B72050F00CF6435 = {
 			isa = PBXGroup;
 			children = (
-				3BF638501B789ABB002DFC78 /* README.md */,
-				3BF638511B789ABB002DFC78 /* ShareManager.podspec */,
 				3B8312D91B7205E700CF6435 /* ShareManager */,
 				3B8311B81B72050F00CF6435 /* ShareManagerDemo */,
 				3B8311B71B72050F00CF6435 /* Products */,
@@ -342,7 +337,6 @@
 				3B8311CA1B72050F00CF6435 /* LaunchScreen.xib in Resources */,
 				3B8311C71B72050F00CF6435 /* Images.xcassets in Resources */,
 				3BF6387A1B78A0B6002DFC78 /* SMResources.bundle in Resources */,
-				3BF638531B789ABB002DFC78 /* ShareManager.podspec in Resources */,
 				3B8313491B7205E700CF6435 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,7 +383,6 @@
 			files = (
 				3BF6386E1B789F26002DFC78 /* ShareToFacebook.m in Sources */,
 				3BF638751B789F26002DFC78 /* SMIcon.m in Sources */,
-				3BF638521B789ABB002DFC78 /* README.md in Sources */,
 				3B83139E1B72151E00CF6435 /* UIColor+hex.m in Sources */,
 				3BF638721B789F26002DFC78 /* ShareToWeixin.m in Sources */,
 				3B8311C21B72050F00CF6435 /* ViewController.m in Sources */,
@@ -415,6 +408,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				3B8311C41B72050F00CF6435 /* Base */,
+				3BC5EEDB1B79F17300FE1AC9 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

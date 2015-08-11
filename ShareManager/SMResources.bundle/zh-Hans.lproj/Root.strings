@@ -1,4 +1,6 @@
-"sm.angler" = "钓鱼人";
+/* A single strings file, whose title is specified in your preferences schema. The strings files provide the localized content to display to the user for each of your preferences. */
+
+
 "sm.weibo" = "新浪微博";
 "sm.qzone" = "QQ空间";
 "sm.weixin" = "微信朋友圈";

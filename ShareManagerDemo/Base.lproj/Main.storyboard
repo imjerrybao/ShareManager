@@ -20,8 +20,8 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4d-h9-16t">
-                                <rect key="frame" x="270" y="135" width="60" height="30"/>
-                                <state key="normal" title="单个分享">
+                                <rect key="frame" x="257" y="135" width="87" height="30"/>
+                                <state key="normal" title="Single Share">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -29,16 +29,16 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVQ-cR-rp7">
-                                <rect key="frame" x="270" y="360" width="60" height="30"/>
-                                <state key="normal" title="批量分享">
+                                <rect key="frame" x="258" y="360" width="85" height="30"/>
+                                <state key="normal" title="Batch Share">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="shareWithBatch:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="6uY-eA-VNL"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="选择平台:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqL-mF-jgP">
-                                <rect key="frame" x="16" y="291" width="65" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Platform:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqL-mF-jgP">
+                                <rect key="frame" x="16" y="291" width="120" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="73" id="Lcq-5W-AB9"/>
                                 </constraints>
@@ -51,7 +51,7 @@
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOV-mp-jWf">
-                                <rect key="frame" x="96" y="285" width="25" height="25"/>
+                                <rect key="frame" x="151" y="285" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="dSG-tV-L6f"/>
                                     <constraint firstAttribute="width" constant="25" id="oh4-uk-yV7"/>
@@ -64,7 +64,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8wf-td-M0a">
-                                <rect key="frame" x="136" y="285" width="25" height="25"/>
+                                <rect key="frame" x="191" y="285" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="fzh-Z2-lTg"/>
                                     <constraint firstAttribute="height" constant="25" id="nlZ-Ab-3fx"/>
@@ -77,7 +77,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2OL-Sf-2BR">
-                                <rect key="frame" x="176" y="285" width="25" height="25"/>
+                                <rect key="frame" x="231" y="285" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="NY8-lM-Zpf"/>
                                     <constraint firstAttribute="width" constant="25" id="tXZ-gb-E78"/>
@@ -90,7 +90,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfU-Zs-K3J">
-                                <rect key="frame" x="216" y="285" width="25" height="25"/>
+                                <rect key="frame" x="271" y="285" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="VnG-sv-LNA"/>
                                     <constraint firstAttribute="height" constant="25" id="px1-qa-fUx"/>
@@ -103,7 +103,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xY4-dj-Z9W">
-                                <rect key="frame" x="256" y="285" width="25" height="25"/>
+                                <rect key="frame" x="311" y="285" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="0tO-lw-HJ6"/>
                                     <constraint firstAttribute="height" constant="25" id="pUR-hJ-kM7"/>

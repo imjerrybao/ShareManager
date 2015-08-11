@@ -1,0 +1,9 @@
+
+/* Class = "UIButton"; normalTitle = "单个分享"; ObjectID = "m4d-h9-16t"; */
+"m4d-h9-16t.normalTitle" = "单个分享";
+
+/* Class = "UILabel"; text = "选择平台:"; ObjectID = "mqL-mF-jgP"; */
+"mqL-mF-jgP.text" = "选择平台:";
+
+/* Class = "UIButton"; normalTitle = "批量分享"; ObjectID = "qVQ-cR-rp7"; */
+"qVQ-cR-rp7.normalTitle" = "批量分享";
