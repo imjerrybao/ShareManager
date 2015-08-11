@@ -1,4 +1,4 @@
-# ShareManagerDemo
+# ShareManager
 A SNS Platform Share Manager for ios, support Facebook, Twitter, QQ and Weixin.
 
 # How To Integrate to Your Project
