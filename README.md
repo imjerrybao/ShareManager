@@ -7,7 +7,7 @@ Support single and batch share to social platforms.
 <img src="https://raw.githubusercontent.com/imjerrybao/ShareManager/master/ReadmeImages/s2.jpg" alt="Drawing" width="320px" />
 
 # How To Integrate to Your Project
-1. Install via pod
+1. Install via cocoapods
 
     ````
     platform :ios, '7.0'
