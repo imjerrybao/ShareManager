@@ -16,7 +16,7 @@ Support single and batch share to social platforms.
     
     target 'Your_Target' do
     
-    pod 'ShareManager', :git => 'https://github.com/imjerrybao/ShareManager.git'
+    pod 'ShareManager'
     
     end
     ````
