@@ -81,7 +81,8 @@ Support single and batch share to social platforms.
     [[ShareManager sharedManager] setContentWithTitle:sTitle description:sDesc image:sImage url:sUrl];
     [[ShareManager sharedManager] batchShareWithShareList:shareList];
     ````
-# Handle share result with ShareManagerDelegate
+# Handle share result
+    use ShareManagerDelegate
     ````
     - (void)showShareResult:(SMShareResult *)result;
     ````
