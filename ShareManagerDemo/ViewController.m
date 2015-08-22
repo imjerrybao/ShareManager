@@ -206,11 +206,9 @@
         default:
             break;
     }
-    
-    dispatch_async(dispatch_get_main_queue(), ^{
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Hint" message:message delegate:nil cancelButtonTitle:@"Got it" otherButtonTitles:nil, nil];
-        [alertView show];
-    });
+
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Hint" message:message delegate:nil cancelButtonTitle:@"Got it" otherButtonTitles:nil, nil];
+    [alertView show];
 }
 
 @end
