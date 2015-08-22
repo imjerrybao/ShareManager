@@ -1,7 +1,8 @@
 Pod::Spec.new do |s|
   s.ios.deployment_target   = '7.0'
+  s.platform                = :ios, '7.0'
   s.name                    = 'ShareManager'
-  s.version                 = '0.1.0'
+  s.version                 = '0.2.0'
   s.summary                 = 'A SNS Platform Share Manager for ios, support Facebook, Twitter, QQ and Weixin.'
   s.homepage                = 'https://github.com/imjerrybao/ShareManager'
   s.license                 = { :type => 'MIT', :file => 'LICENSE' }
@@ -14,7 +15,6 @@ Pod::Spec.new do |s|
   s.ios.vendored_frameworks = 'ShareManager/lib/TencentQQ/TencentOpenAPI.framework'
   s.libraries               = 'c++', 'sqlite3.0', 'z'
   s.ios.vendored_library    = 'ShareManager/lib/WeChatSDK/libWeChatSDK.a'
-  s.platform                = :ios, '7.0'
   s.requires_arc            = true
   s.dependency              'BlocksKit', '~> 2.2.5'
   s.dependency              'MBProgressHUD', '~> 0.9.1'
