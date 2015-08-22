@@ -82,8 +82,10 @@ Support single and batch share to social platforms.
     [[ShareManager sharedManager] batchShareWithShareList:shareList];
     ````
 # Handle share result with ShareManagerDelegate
-- (void)showShareResult:(SMShareResult *)result;
-Reference the demos ViewController.m file
+    ````
+    - (void)showShareResult:(SMShareResult *)result;
+    ````
+    Reference the demos ViewController.m file
 
 # Issues
 Any issues can email me: imjerrybao@gmail.com
