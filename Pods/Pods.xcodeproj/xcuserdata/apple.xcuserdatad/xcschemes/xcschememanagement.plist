@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>BlocksKit.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>OAuthConsumer-OAuthConsumer.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>OAuthConsumer.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>Pods.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>76D38CB1DFE0E302125EF8CA417A6B28</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>915041E6A96F40B31C7838B916E48AE9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A97D484E5D550EC6A334770B0792D1CD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AA2755A782CBCA6F9F211CA61F6535D7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EB72CA2887BA25500279AED3430890DD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "SMConfig.h"
+#import "SMConstant.h"
 #import "SMImage.h"
 
 @interface SMContent : NSObject

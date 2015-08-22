@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import "SMIcon.h"
-#import "SMConfig.h"
+#import "SMConstant.h"
 
 @protocol ShareUIDelegate <NSObject>
 

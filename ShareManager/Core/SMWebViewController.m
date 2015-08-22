@@ -7,7 +7,7 @@
 //
 
 #import "SMWebViewController.h"
-#import "SMConfig.h"
+#import "SMConstant.h"
 
 @interface SMWebViewController()
 @property (nonatomic, strong) UIColor *originNavBarColor;

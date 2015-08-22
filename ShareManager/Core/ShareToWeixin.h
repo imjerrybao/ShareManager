@@ -10,7 +10,7 @@
 #import <Foundation/Foundation.h>
 #import "WXApi.h"
 #import "WXApiObject.h"
-#import "SMConfig.h"
+#import "SMConstant.h"
 #import "SMContent.h"
 
 #define WEIXIN_ACCESS_TOKEN          @"weixin_access_token"

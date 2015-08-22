@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1830B9B71B88B48100F1A841 /* SMShareResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 1830B9B61B88B48100F1A841 /* SMShareResult.m */; };
 		3B8311BC1B72050F00CF6435 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8311BB1B72050F00CF6435 /* main.m */; };
 		3B8311BF1B72050F00CF6435 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8311BE1B72050F00CF6435 /* AppDelegate.m */; };
 		3B8311C21B72050F00CF6435 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8311C11B72050F00CF6435 /* ViewController.m */; };
@@ -40,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		16739844E2480E958A959EBF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		1830B9B51B88B48100F1A841 /* SMShareResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMShareResult.h; sourceTree = "<group>"; };
+		1830B9B61B88B48100F1A841 /* SMShareResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMShareResult.m; sourceTree = "<group>"; };
 		3B8311B61B72050F00CF6435 /* ShareManagerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareManagerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B8311BA1B72050F00CF6435 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B8311BB1B72050F00CF6435 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -88,7 +91,7 @@
 		3BF638601B789F26002DFC78 /* ShareToWeixin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareToWeixin.m; sourceTree = "<group>"; };
 		3BF638611B789F26002DFC78 /* ShareUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareUI.h; sourceTree = "<group>"; };
 		3BF638621B789F26002DFC78 /* ShareUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareUI.m; sourceTree = "<group>"; };
-		3BF638631B789F26002DFC78 /* SMConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMConfig.h; sourceTree = "<group>"; };
+		3BF638631B789F26002DFC78 /* SMConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMConstant.h; sourceTree = "<group>"; };
 		3BF638641B789F26002DFC78 /* SMContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMContent.h; sourceTree = "<group>"; };
 		3BF638651B789F26002DFC78 /* SMContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMContent.m; sourceTree = "<group>"; };
 		3BF638661B789F26002DFC78 /* SMIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMIcon.h; sourceTree = "<group>"; };
@@ -232,7 +235,7 @@
 				3BF638601B789F26002DFC78 /* ShareToWeixin.m */,
 				3BF638611B789F26002DFC78 /* ShareUI.h */,
 				3BF638621B789F26002DFC78 /* ShareUI.m */,
-				3BF638631B789F26002DFC78 /* SMConfig.h */,
+				3BF638631B789F26002DFC78 /* SMConstant.h */,
 				3BF638641B789F26002DFC78 /* SMContent.h */,
 				3BF638651B789F26002DFC78 /* SMContent.m */,
 				3BF638661B789F26002DFC78 /* SMIcon.h */,
@@ -241,6 +244,8 @@
 				3BF638691B789F26002DFC78 /* SMImage.m */,
 				3BF6386B1B789F26002DFC78 /* SMWebViewController.h */,
 				3BF6386C1B789F26002DFC78 /* SMWebViewController.m */,
+				1830B9B51B88B48100F1A841 /* SMShareResult.h */,
+				1830B9B61B88B48100F1A841 /* SMShareResult.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -397,6 +402,7 @@
 				3BF638761B789F26002DFC78 /* SMImage.m in Sources */,
 				3B83139B1B72144B00CF6435 /* UIView+size.m in Sources */,
 				3BF638701B789F26002DFC78 /* ShareToTwitter.m in Sources */,
+				1830B9B71B88B48100F1A841 /* SMShareResult.m in Sources */,
 				3B8311BC1B72050F00CF6435 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

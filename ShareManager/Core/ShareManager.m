@@ -411,49 +411,58 @@
 }
 - (void)showShareResultWithPlatform:(SMPlatform)platform state:(ShareContentState)state
 {
+    if ([self.shareDelegate respondsToSelector:@selector(showShareResult:)]) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            SMShareResult *result = [SMShareResult new];
+            result.platform = platform;
+            result.state = state;
+            [self.shareDelegate performSelector:@selector(showShareResult:) withObject:result];
+        });
+        return;
+    }
     
-    NSString *title;
+    NSString *message;
     switch (platform) {
         case SMPlatformFacebookOAuth:
             if (state == ShareContentStateSuccess) {
-                title = Locale(@"sm.shareto.facebook.success");
+                message = Locale(@"sm.shareto.facebook.success");
             } else {
-                title = Locale(@"sm.shareto.facebook.fail");
+                message = Locale(@"sm.shareto.facebook.fail");
             }
             break;
         case SMPlatformTwitterOAuth:
             if (state == ShareContentStateSuccess) {
-                title = Locale(@"sm.shareto.twitter.success");
+                message = Locale(@"sm.shareto.twitter.success");
             } else {
-                title = Locale(@"sm.shareto.twitter.fail");
+                message = Locale(@"sm.shareto.twitter.fail");
             }
             break;
         case SMPlatformWeiboOAuth:
             if (state == ShareContentStateSuccess) {
-                title = Locale(@"sm.shareto.weibo.success");
+                message = Locale(@"sm.shareto.weibo.success");
             } else {
-                title = Locale(@"sm.shareto.weibo.fail");
+                message = Locale(@"sm.shareto.weibo.fail");
             }
             break;
         case SMPlatformWeixin:
             if (state == ShareContentStateSuccess) {
-                title = Locale(@"sm.shareto.weixin.success");
+                message = Locale(@"sm.shareto.weixin.success");
             } else {
                 if (state == ShareContentStateUnInstalled) {
-                    title = Locale(@"sm.shareto.weixin.notinstall");
+                    message = Locale(@"sm.shareto.weixin.notinstall");
                 } else {
-                    title = Locale(@"sm.shareto.weixin.fail");
+                    message = Locale(@"sm.shareto.weixin.fail");
                 }
             }
             break;
         case SMPlatformTencentQQ:
             if (state == ShareContentStateSuccess) {
-                title = Locale(@"sm.shareto.qzone.success");
+                message = Locale(@"sm.shareto.qzone.success");
             } else {
                 if (state == ShareContentStateUnInstalled) {
-                    title = Locale(@"sm.shareto.qzone.notinstall");
+                    message = Locale(@"sm.shareto.qzone.notinstall");
                 } else {
-                    title = Locale(@"sm.shareto.qzone.fail");
+                    message = Locale(@"sm.shareto.qzone.fail");
                 }
             }
             break;
@@ -462,9 +471,7 @@
     }
     
     dispatch_async(dispatch_get_main_queue(), ^{
-//        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:Locale(@"sm.general.hint") message:title delegate:nil cancelButtonTitle:Locale(@"sm.general.ok") otherButtonTitles:nil, nil];
-        
-        UIAlertView *alertView = [[UIAlertView alloc] bk_initWithTitle:Locale(@"sm.general.hint") message:title];
+        UIAlertView *alertView = [[UIAlertView alloc] bk_initWithTitle:Locale(@"sm.general.hint") message:message];
         [alertView bk_setCancelButtonWithTitle:Locale(@"sm.general.ok") handler:^{
             if (self.shareFinishBlock) {
                 self.shareFinishBlock();

@@ -19,8 +19,6 @@
 "sm.shareto.qzone.success" = "分享到QQ空间成功";
 "sm.shareto.qzone.fail" = "分享到QQ空间失败";
 "sm.shareto.qzone.notinstall" = "您还没有安装QQ客户端";
-"sm.shareto.angler.success" = "分享到钓鱼人成功";
-"sm.shareto.angler.fail" = "分享到钓鱼人失败";
 
 "sm.general.hint" = "提示";
 "sm.general.cancel" = "取消";

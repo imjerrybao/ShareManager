@@ -8,9 +8,9 @@
 
 #import "ViewController.h"
 #import "ShareManager.h"
-#import "SMConfig.h"
+#import "SMConstant.h"
 
-@interface ViewController ()
+@interface ViewController () <ShareManagerDelegate>
 @property (nonatomic, strong) NSString *sTitle;
 @property (nonatomic, strong) NSString *sDesc;
 @property (nonatomic, strong) NSString *sContent;
@@ -43,6 +43,8 @@
     _weiboBtn.tag = 1000+SMPlatformWeiboOAuth;
     _weixinBtn.tag = 1000+SMPlatformWeixin;
     _qzoneBtn.tag = 1000+SMPlatformTencentQQ;
+    
+    [ShareManager sharedManager].shareDelegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -148,6 +150,67 @@
     }
     [[ShareManager sharedManager] setContentWithTitle:_sTitle description:_sDesc image:_sImage url:_sUrl];
     [[ShareManager sharedManager] batchShareWithShareList:_shareList];
+}
+
+#pragma mark - ShareManagerDelegate
+- (void)showShareResult:(SMShareResult *)result
+{
+    SMPlatform platform = result.platform;
+    ShareContentState state = result.state;
+    
+    NSString *message;
+    switch (platform) {
+        case SMPlatformFacebookOAuth:
+            if (state == ShareContentStateSuccess) {
+                message = @"(custom string) facebook share success";
+            } else {
+                message = @"(custom string) facebook share fail";
+            }
+            break;
+        case SMPlatformTwitterOAuth:
+            if (state == ShareContentStateSuccess) {
+                message = @"(custom string) twitter share success";
+            } else {
+                message = @"(custom string) twitter share fail";
+            }
+            break;
+        case SMPlatformWeiboOAuth:
+            if (state == ShareContentStateSuccess) {
+                message = @"(custom string) weibo share success";
+            } else {
+                message = @"(custom string) weibo share fail";
+            }
+            break;
+        case SMPlatformWeixin:
+            if (state == ShareContentStateSuccess) {
+                message = @"(custom string) weixin.success";
+            } else {
+                if (state == ShareContentStateUnInstalled) {
+                    message = @"(custom string) weixin not install";
+                } else {
+                    message = @"(custom string) weixin share fail";
+                }
+            }
+            break;
+        case SMPlatformTencentQQ:
+            if (state == ShareContentStateSuccess) {
+                message = @"(custom string) qzone.success";
+            } else {
+                if (state == ShareContentStateUnInstalled) {
+                    message = @"(custom string) qzone not install";
+                } else {
+                    message = @"(custom string) qzone share fail";
+                }
+            }
+            break;
+        default:
+            break;
+    }
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Hint" message:message delegate:nil cancelButtonTitle:@"Got it" otherButtonTitles:nil, nil];
+        [alertView show];
+    });
 }
 
 @end

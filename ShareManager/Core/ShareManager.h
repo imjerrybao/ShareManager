@@ -18,10 +18,17 @@
 #import "SMIcon.h"
 #import "ShareUI.h"
 #import "SMWebViewController.h"
-#import "SMConfig.h"
+#import "SMConstant.h"
+#import "SMShareResult.h"
 
 #define SHARE_TITLE_LENGTH 20
 #define SHARE_CONTENT_LENGTH 140
+
+@protocol ShareManagerDelegate <NSObject>
+@optional
+- (void)showShareResult:(SMShareResult *)result;
+@end
+
 typedef void (^ShareFinishBlock)(void);
 @class ShareManager;
 typedef void (^ShareManagerBlock)(ShareContentState resultCode);
@@ -51,6 +58,8 @@ typedef void (^ShareManagerBlock)(ShareContentState resultCode);
 @property (nonatomic, weak) UIViewController *presentViewController;
 
 @property (nonatomic, copy) ShareFinishBlock shareFinishBlock;
+
+@property (nonatomic, assign) id<ShareManagerDelegate> shareDelegate;
 
 + (ShareManager *)sharedManager;
 

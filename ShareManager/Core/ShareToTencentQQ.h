@@ -11,7 +11,7 @@
 #import <TencentOpenAPI/TencentOAuth.h>
 #import <TencentOpenAPI/TencentOAuthObject.h>
 #import <TencentOpenAPI/QQApiInterface.h>
-#import "SMConfig.h"
+#import "SMConstant.h"
 #import "SMContent.h"
 
 #define TENCENTQQ_ACCESS_TOKEN          @"tencentqq_access_token"
