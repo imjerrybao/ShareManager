@@ -564,34 +564,34 @@
 
 + (NSArray *)AuthPlatformList
 {
-    NSMutableArray *bindList = [NSMutableArray array];
+    NSMutableArray *authList = [NSMutableArray array];
     for (id platform in ShareTagList) {
         switch ([platform integerValue]) {
             case SMPlatformTencentQQ:
                 if ([ShareManager isAuthPlatform:SMPlatformTencentQQ]) {
-                    [bindList addObject:platform];
+                    [authList addObject:platform];
                 }
                 break;
             case SMPlatformWeixin:
                 if ([ShareManager isAuthPlatform:SMPlatformWeixin]) {
-                    [bindList addObject:platform];
+                    [authList addObject:platform];
                 }
                 break;
             case SMPlatformWeibo:
             case SMPlatformWeiboOAuth:
                 if ([ShareManager isAuthPlatform:SMPlatformWeiboOAuth]) {
-                    [bindList addObject:platform];
+                    [authList addObject:platform];
                 }
                 break;
             case SMPlatformFacebook:
             case SMPlatformFacebookOAuth:
                 if ([ShareManager isAuthPlatform:SMPlatformFacebookOAuth]) {
-                    [bindList addObject:platform];
+                    [authList addObject:platform];
                 }
                 break;
             case SMPlatformTwitterOAuth:
                 if ([ShareManager isAuthPlatform:SMPlatformTwitterOAuth]) {
-                    [bindList addObject:platform];
+                    [authList addObject:platform];
                 }
                 break;
                 
@@ -599,7 +599,7 @@
                 break;
         }
     }
-    return bindList;
+    return authList;
 }
 
 @end
