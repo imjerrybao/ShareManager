@@ -1,5 +1,5 @@
 # ShareManager
-A SNS Platform Share Manager for ios, support Facebook, Twitter, QQ and Weixin.
+A SNS Platforms Share Manager for ios, support Facebook, Twitter, Weibo, QQ and Wechat.
 
 
 Support single and batch share to social platforms.
@@ -94,7 +94,7 @@ Any issues can email me: imjerrybao@gmail.com
 # License
 The MIT License (MIT)
 
-Copyright (c) 2015 imjerrybao
+Copyright (c) 2015 Jerry Bao
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
