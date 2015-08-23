@@ -161,6 +161,6 @@ typedef void (^ShareManagerBlock)(ShareContentState resultCode);
  *
  *  @return Authorized Platform List
  */
-+ (NSArray *)AuthPlatformList;
++ (NSArray *)authPlatformList;
 
 @end

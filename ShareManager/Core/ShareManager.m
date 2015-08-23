@@ -562,7 +562,7 @@
     }
 }
 
-+ (NSArray *)AuthPlatformList
++ (NSArray *)authPlatformList
 {
     NSMutableArray *authList = [NSMutableArray array];
     for (id platform in ShareTagList) {
@@ -599,7 +599,7 @@
                 break;
         }
     }
-    return authList;
+    return [NSArray arrayWithArray:authList];
 }
 
 @end
