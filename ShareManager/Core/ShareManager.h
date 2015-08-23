@@ -35,85 +35,132 @@ typedef void (^ShareManagerBlock)(ShareContentState resultCode);
 
 @interface ShareManager : NSObject <ShareUIDelegate>
 
-@property (nonatomic, strong) NSString *tencentQQAppKey;
+@property (nonatomic, weak) UIViewController *presentViewController; //Presented View Controller
 
-@property (nonatomic, strong) NSString *weixinAppKey;
+@property (nonatomic, assign) id<ShareManagerDelegate> shareDelegate; //ShareManager Delegate
 
-@property (nonatomic, strong) NSString *weiboAppKey;
-@property (nonatomic, strong) NSString *weiboAppSecret;
-@property (nonatomic, strong) NSString *weiboRedirectUri;
-
-@property (nonatomic, strong) NSString *twitterAppKey;
-@property (nonatomic, strong) NSString *twitterAppSecret;
-@property (nonatomic, strong) NSString *twitterRedirectUri;
-
-@property (nonatomic, strong) NSString *facebookAppKey;
-@property (nonatomic, strong) NSString *facebookAppSecret;
-@property (nonatomic, strong) NSString *facebookRedirectUri;
-
-@property (nonatomic, strong) SMContent *shareContent;
-@property (nonatomic, strong) UIAlertView *alertView;
-
-@property (nonatomic, strong) ShareUI *shareUI;
-@property (nonatomic, weak) UIViewController *presentViewController;
-
-@property (nonatomic, copy) ShareFinishBlock shareFinishBlock;
-
-@property (nonatomic, assign) id<ShareManagerDelegate> shareDelegate;
-
+/**
+ *  Get ShareManager Singleton
+ *
+ *  @return ShareManager Singleton
+ */
 + (ShareManager *)sharedManager;
 
-#pragma mark - 初始化分享平台
+/**
+ *  Initialize QQ Platform
+ *
+ *  @param appKey    QQ App Key
+ *  @param appSecret QQ App Secret
+ */
 - (void)initTencentQQWithAppKey:(NSString *)appKey appSecret:(NSString *)appSecret;
+
+/**
+ *  Initialize Wechat Platform
+ *
+ *  @param appKey    Wechat App Key
+ *  @param appSecret Wechat App Secret
+ */
 - (void)initWexinWithAppKey:(NSString *)appKey appSecret:(NSString *)appSecret;
+
+/**
+ *  Initialize Weibo Platform
+ *
+ *  @param appKey      Weibo App Key
+ *  @param appSecret   Weibo App Secret
+ *  @param redirectUri Weibo Redirect Uri
+ */
 - (void)initWeiboWithAppKey:(NSString *)appKey appSecret:(NSString *)appSecret redirectUri:(NSString *)redirectUri;
+
+/**
+ *  Initialize Twitter Platform
+ *
+ *  @param appKey      Twitter App Key
+ *  @param appSecret   Twitter App Secret
+ *  @param redirectUri Twitter Redirect Uri
+ */
 - (void)initTwitterWithAppKey:(NSString *)appKey appSecret:(NSString *)appSecret redirectUri:(NSString *)redirectUri;
+
+/**
+ *  Initialize Facebook Platform
+ *
+ *  @param appKey      Facebook App Key
+ *  @param appSecret   Facebook App Secret
+ *  @param redirectUri Facebook Redirect Uri
+ */
 - (void)initFacebookWithAppKey:(NSString *)appKey appSecret:(NSString *)appSecret redirectUri:(NSString *)redirectUri;
 
-#pragma mark - 调用客户端的处理
--(BOOL) handleOpenURL:(NSURL *) url;
-
-#pragma mark - 生成分享内容
 /**
- *  初始化分享内容
+ *  Open A Resource Identified By URL
  *
- *  @param title       标题，只在QQ和微信中有效
- *  @param description 内容
- *  @param image       图片
- *  @param url         链接，只在QQ和微信中有效
- *  @param mediaType   分享类型
+ *  @param url The URL of Resource
  *
- *  @return void
+ *  @return Should Open The URL or Not
+ */
+- (BOOL) handleOpenURL:(NSURL *) url;
+
+/**
+ *  Initialize The Shared Content
+ *
+ *  @param title       Title of Share Content (Only Support QQ and Wechat)
+ *  @param description Description of Share Content
+ *  @param image       Image of Share Content
+ *  @param url         Url of Share Content
  */
 - (void)setContentWithTitle:(NSString *)title
                 description:(NSString*)description
                       image:(SMImage *)image
                         url:(NSString *)url;
 
-#pragma 弹窗选择平台单个分享actions
+/**
+ *  Show Share Pop Window
+ */
 - (void)showShareWindow;
+
+/**
+ *  Share Content To A Platform
+ *
+ *  @param platform     Specified Platform
+ *  @param successBlock Success Block
+ *  @param failBlock    Fail Block
+ */
 - (void)shareContentToPlatform:(SMPlatform)platform
                   successBlock:(ShareManagerBlock)successBlock
                      failBlock:(ShareManagerBlock)failBlock;
 
-#pragma mark - 一键分享actions
+/**
+ *  Get A Platform's Access Token
+ *
+ *  @param platform     Specified Platform
+ *  @param successBlock Success Block
+ *  @param failBlock    Fail Block
+ */
 - (void)obtainAccessTokenWithPlatform:(SMPlatform)platform
                          successBlock:(void(^)(void))successBlock
                             failBlock:(void(^)(void))failBlock;
 - (void)batchShareWithShareList:(NSMutableArray *)shareList;
 
-#pragma mark - 网页显示页面
-
-- (void)setPresentViewController:(UIViewController *)presentViewController;
-
 
 /**
- *  是否绑定分享平台
+ *  Check If Is Authorized A Platform
  *
- *  @param platform 分享平台
+ *  @param platform Specified Platform
  *
- *  @return 绑定状态
+ *  @return Auth Status
  */
 + (BOOL)isAuthPlatform:(SMPlatform)platform;
+
+/**
+ *  Remove Access Token Of A Platform
+ *
+ *  @param platform Specified Platform
+ */
++ (void)removeAuthWithPlatform:(SMPlatform)platform;
+
+/**
+ *  Get Authorized Platform List
+ *
+ *  @return Authorized Platform List
+ */
++ (NSArray *)AuthPlatformList;
 
 @end

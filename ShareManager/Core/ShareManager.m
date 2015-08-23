@@ -13,8 +13,30 @@
 #define ShareTagList      @[@(SMPlatformWeiboOAuth), @(SMPlatformTencentQQ), @(SMPlatformWeixin), @(SMPlatformFacebookOAuth), @(SMPlatformTwitterOAuth)]
 
 @interface ShareManager ()
-@property (nonatomic, assign) int index;
+@property (nonatomic, strong) NSString *tencentQQAppKey; //QQ App Key
 
+@property (nonatomic, strong) NSString *weixinAppKey; //Wechat App Key
+
+@property (nonatomic, strong) NSString *weiboAppKey; //Weibo App Key
+@property (nonatomic, strong) NSString *weiboAppSecret; //Weibo App Secret
+@property (nonatomic, strong) NSString *weiboRedirectUri; //Weibo Redirect Uri
+
+@property (nonatomic, strong) NSString *twitterAppKey; //Twitter App Key
+@property (nonatomic, strong) NSString *twitterAppSecret; //Twitter App Secret
+@property (nonatomic, strong) NSString *twitterRedirectUri; //Twitter Redirect Uri
+
+@property (nonatomic, strong) NSString *facebookAppKey; //Facebook App Key
+@property (nonatomic, strong) NSString *facebookAppSecret; //Facebook App Secret
+@property (nonatomic, strong) NSString *facebookRedirectUri; //Facebook Redirect Uri
+
+@property (nonatomic, strong) SMContent *shareContent; //The Content to Share
+@property (nonatomic, strong) UIAlertView *alertView;
+
+@property (nonatomic, strong) ShareUI *shareUI;
+
+@property (nonatomic, copy) ShareFinishBlock shareFinishBlock;
+
+@property (nonatomic, assign) int index;
 @end
 
 @implementation ShareManager
@@ -43,11 +65,6 @@
     if (![NSString isBlankString:_shareContent.url]) {
         _shareContent.desc = [NSString stringWithFormat:@"%@ %@", _shareContent.url, _shareContent.desc];
     }
-}
-
-- (void)setPresentViewController:(UIViewController *)presentViewController
-{
-    _presentViewController = presentViewController;
 }
 
 - (void)initTencentQQWithAppKey:(NSString *)appKey appSecret:(NSString *)appSecret
@@ -517,6 +534,72 @@
             break;
     }
     return NO;
+}
+
++ (void)removeAuthWithPlatform:(SMPlatform)platform
+{
+    switch (platform) {
+        case SMPlatformTencentQQ:
+            [[NSUserDefaults standardUserDefaults] removeObjectForKey:TENCENTQQ_ACCESS_TOKEN];
+            break;
+        case SMPlatformWeixin:
+            [[NSUserDefaults standardUserDefaults] removeObjectForKey:WEIXIN_ACCESS_TOKEN];
+            break;
+        case SMPlatformWeibo:
+        case SMPlatformWeiboOAuth:
+            [[NSUserDefaults standardUserDefaults] removeObjectForKey:WEIBO_ACCESS_TOKEN];
+            break;
+        case SMPlatformFacebook:
+        case SMPlatformFacebookOAuth:
+            [[NSUserDefaults standardUserDefaults] removeObjectForKey:FACEBOOK_ACCESS_TOKEN];
+            break;
+        case SMPlatformTwitterOAuth:
+            [OAToken removeFromUserDefaultsWithServiceProviderName:TWITTER_ACCESS_TOKEN prefix:nil];
+            break;
+            
+        default:
+            break;
+    }
+}
+
++ (NSArray *)AuthPlatformList
+{
+    NSMutableArray *bindList = [NSMutableArray array];
+    for (id platform in ShareTagList) {
+        switch ([platform integerValue]) {
+            case SMPlatformTencentQQ:
+                if ([ShareManager isAuthPlatform:SMPlatformTencentQQ]) {
+                    [bindList addObject:platform];
+                }
+                break;
+            case SMPlatformWeixin:
+                if ([ShareManager isAuthPlatform:SMPlatformWeixin]) {
+                    [bindList addObject:platform];
+                }
+                break;
+            case SMPlatformWeibo:
+            case SMPlatformWeiboOAuth:
+                if ([ShareManager isAuthPlatform:SMPlatformWeiboOAuth]) {
+                    [bindList addObject:platform];
+                }
+                break;
+            case SMPlatformFacebook:
+            case SMPlatformFacebookOAuth:
+                if ([ShareManager isAuthPlatform:SMPlatformFacebookOAuth]) {
+                    [bindList addObject:platform];
+                }
+                break;
+            case SMPlatformTwitterOAuth:
+                if ([ShareManager isAuthPlatform:SMPlatformTwitterOAuth]) {
+                    [bindList addObject:platform];
+                }
+                break;
+                
+            default:
+                break;
+        }
+    }
+    return bindList;
 }
 
 @end

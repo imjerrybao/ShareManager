@@ -121,21 +121,6 @@
         _failureBlock = nil;
     }
 #endif
-    
-    /*
-     ErrCode ERR_OK = 0(用户同意)
-     ERR_AUTH_DENIED = -4（用户拒绝授权）
-     ERR_USER_CANCEL = -2（用户取消）
-     code    用户换取access_token的code，仅在ErrCode为0时有效
-     state   第三方程序发送时用来标识其请求的唯一性的标志，由第三方程序调用sendReq时传入，由微信终端回传，state字符串长度不能超过1K
-     lang    微信客户端当前语言
-     country 微信用户当前国家信息
-     */
-//    SendAuthResp *aresp = (SendAuthResp *)resp;
-//    if (aresp.errCode == 0) {
-//        _code = aresp.code;
-//    }
-    
 }
 
 #pragma mark - WeiChat API
@@ -171,8 +156,6 @@
     _failureTokenBlock = [aFailedBlock copy];
 }
 
-
-
 #pragma mark - auth action
 - (void)sendAuthRequest
 {
@@ -184,74 +167,5 @@
 #endif
 }
 
-- (void)getAccessToken
-{
-    //https://api.weixin.qq.com/sns/oauth2/access_token?appid=APPID&secret=SECRET&code=CODE&grant_type=authorization_code
-    
-    NSString *url =[NSString stringWithFormat:@"https://api.weixin.qq.com/sns/oauth2/access_token?appid=%@&secret=%@&code=%@&grant_type=authorization_code", _appKey, _appSecret, _code];
-    
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSURL *zoneUrl = [NSURL URLWithString:url];
-        NSString *zoneStr = [NSString stringWithContentsOfURL:zoneUrl encoding:NSUTF8StringEncoding error:nil];
-        NSData *data = [zoneStr dataUsingEncoding:NSUTF8StringEncoding];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            if (data) {
-                NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-                /*
-                 {
-                 "access_token" = "OezXcEiiBSKSxW0eoylIeJDUKD6z6dmr42JANLPjNN7Kaf3e4GZ2OncrCfiKnGWiusJMZwzQU8kXcnT1hNs_ykAFDfDEuNp6waj-bDdepEzooL_k1vb7EQzhP8plTbD0AgR8zCRi1It3eNS7yRyd5A";
-                 "expires_in" = 7200;
-                 openid = oyAaTjsDx7pl4Q42O3sDzDtA7gZs;
-                 "refresh_token" = "OezXcEiiBSKSxW0eoylIeJDUKD6z6dmr42JANLPjNN7Kaf3e4GZ2OncrCfiKnGWi2ZzH_XfVVxZbmha9oSFnKAhFsS0iyARkXCa7zPu4MqVRdwyb8J16V8cWw7oNIff0l-5F-4-GJwD8MopmjHXKiA";
-                 scope = "snsapi_userinfo,snsapi_base";
-                 }
-                 */
-                
-                _accessToken = [dic objectForKey:@"access_token"];
-                _openId = [dic objectForKey:@"openid"];
-                NSLog(@"access_token: %@", _accessToken);
-                NSLog(@"openid: %@", _openId);
-                
-            }
-        });
-    });
-}
-
-- (void)getUserInfo
-{
-    // https://api.weixin.qq.com/sns/userinfo?access_token=ACCESS_TOKEN&openid=OPENID
-    
-    NSString *url =[NSString stringWithFormat:@"https://api.weixin.qq.com/sns/userinfo?access_token=%@&openid=%@", _accessToken, _openId];
-    
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSURL *zoneUrl = [NSURL URLWithString:url];
-        NSString *zoneStr = [NSString stringWithContentsOfURL:zoneUrl encoding:NSUTF8StringEncoding error:nil];
-        NSData *data = [zoneStr dataUsingEncoding:NSUTF8StringEncoding];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            if (data) {
-                NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-                /*
-                 {
-                 city = Haidian;
-                 country = CN;
-                 headimgurl = "http://wx.qlogo.cn/mmopen/FrdAUicrPIibcpGzxuD0kjfnvc2klwzQ62a1brlWq1sjNfWREia6W8Cf8kNCbErowsSUcGSIltXTqrhQgPEibYakpl5EokGMibMPU/0";
-                 language = "zh_CN";
-                 nickname = "xxx";
-                 openid = oyAaTjsDx7pl4xxxxxxx;
-                 privilege =     (
-                 );
-                 province = Beijing;
-                 sex = 1;
-                 unionid = oyAaTjsxxxxxxQ42O3xxxxxxs;
-                 }
-                 */
-                
-                NSLog(@"nickname: %@", [dic objectForKey:@"nickname"]);
-                NSLog(@"headimgurl: %@", [dic objectForKey:@"headimgurl"]);
-            }
-        });
-        
-    });
-}
 
 @end

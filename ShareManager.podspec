@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.license                 = { :type => 'MIT', :file => 'LICENSE' }
   s.author                  = { 'Jerry' => 'imjerrybao@gmail.com' }
   s.source                  = { :git => 'https://github.com/imjerrybao/ShareManager.git', :tag => "v#{s.version.to_s}" }
-  s.public_header_files     = 'ShareManager/**/*.h'
+  s.public_header_files     = 'ShareManager/Core/ShareManager.h'
   s.source_files            = 'ShareManager/**/*.{h,m}'
   s.resources               = ['ShareManager/SMResources.bundle', 'ShareManager/lib/TencentQQ/TencentOpenApi_IOS_Bundle.bundle']
   s.ios.frameworks          = 'SystemConfiguration'
