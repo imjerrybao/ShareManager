@@ -137,6 +137,12 @@ typedef void (^ShareManagerBlock)(ShareContentState resultCode);
 - (void)obtainAccessTokenWithPlatform:(SMPlatform)platform
                          successBlock:(void(^)(void))successBlock
                             failBlock:(void(^)(void))failBlock;
+
+/**
+ *  Batch Share Content To Platforms
+ *
+ *  @param shareList Platforms List
+ */
 - (void)batchShareWithShareList:(NSMutableArray *)shareList;
 
 
