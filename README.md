@@ -9,19 +9,17 @@ Support single and batch share to social platforms.
 <img src="https://raw.githubusercontent.com/imjerrybao/ShareManager/master/ReadmeImages/s2.jpg" alt="Drawing" width="320px" />
 
 # How To Integrate to Your Project
-1. Install via cocoapods
+1. System Requirement
+
+iOS 7 or later
+
+2. Install via cocoapods
 
     ````
-    platform :ios, '7.0'
-    
-    target 'Your_Target' do
-    
     pod 'ShareManager'
-    
-    end
     ````
 
-2. AppDelegate add below code
+3. AppDelegate add below code
     ```` objective-c
     #import "ShareManager.h"
 
@@ -55,7 +53,7 @@ Support single and batch share to social platforms.
     }
     ````
 
-3. Add URL Schemes to Info.plist
+4. Add URL Schemes to Info.plist
 
     Reference to the example's Info.plist
     
