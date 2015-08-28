@@ -11,7 +11,7 @@ Support single and batch share to social platforms.
 # How To Integrate to Your Project
 1. System Requirement
 
-iOS 7 or later
+    iOS 7 or later
 
 2. Install via cocoapods
 
