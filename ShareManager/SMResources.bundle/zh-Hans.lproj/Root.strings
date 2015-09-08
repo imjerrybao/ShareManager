@@ -6,6 +6,7 @@
 "sm.weixin" = "微信朋友圈";
 "sm.facebook" = "Facebook";
 "sm.twitter" = "Twitter";
+"sm.instagram" = "Instagram";
 
 "sm.shareto.facebook.success" = "分享到Facebook成功";
 "sm.shareto.facebook.fail" = "分享到Facebook失败";
@@ -19,6 +20,8 @@
 "sm.shareto.qzone.success" = "分享到QQ空间成功";
 "sm.shareto.qzone.fail" = "分享到QQ空间失败";
 "sm.shareto.qzone.notinstall" = "您还没有安装QQ客户端";
+"sm.shareto.instagram.success" = "分享到Instagram成功";
+"sm.shareto.instagram.fail" = "分享到Instagram失败";
 
 "sm.general.hint" = "提示";
 "sm.general.cancel" = "取消";

@@ -41,4 +41,5 @@ typedef NS_ENUM(NSInteger, SMPlatform) {
     SMPlatformFacebook,
     SMPlatformFacebookOAuth,
     SMPlatformTwitterOAuth,
+    SMPlatformInstagram,
 };

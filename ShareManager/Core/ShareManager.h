@@ -13,6 +13,7 @@
 #import "ShareToWeibo.h"
 #import "ShareToFacebook.h"
 #import "ShareToTwitter.h"
+#import "ShareToInstagram.h"
 #import "SMContent.h"
 #import "SMImage.h"
 #import "SMIcon.h"
