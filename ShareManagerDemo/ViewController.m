@@ -208,12 +208,23 @@
             break;
         case SMPlatformTencentQQ:
             if (state == ShareContentStateSuccess) {
-                message = @"(custom string) qzone.success";
+                message = @"(custom string) qzone success";
             } else {
                 if (state == ShareContentStateUnInstalled) {
                     message = @"(custom string) qzone not install";
                 } else {
                     message = @"(custom string) qzone share fail";
+                }
+            }
+            break;
+        case SMPlatformInstagram:
+            if (state == ShareContentStateSuccess) {
+                message = @"(custom string) instagram success";
+            } else {
+                if (state == ShareContentStateUnInstalled) {
+                    message = @"(custom string) instagram not install";
+                } else {
+                    message = @"(custom string) instagram share fail";
                 }
             }
             break;

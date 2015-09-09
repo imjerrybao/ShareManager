@@ -99,6 +99,11 @@
     _facebookRedirectUri = redirectUri;
 }
 
+- (void)initInstagramWithAppKey:(NSString *)appKey appSecret:(NSString *)appSecret redirectUri:(NSString *)redirectUri
+{
+    [[ShareToInstagram sharedInstance] initInstagramWithAppKey:appKey appSecret:appSecret redirectUri:redirectUri];
+}
+
 -(BOOL) handleOpenURL:(NSURL *) url
 {
     NSLog(@"handleOpenURL: %@",url.absoluteString);
