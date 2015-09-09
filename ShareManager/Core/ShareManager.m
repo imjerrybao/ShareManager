@@ -98,6 +98,11 @@
     _facebookAppSecret = appSecret;
     _facebookRedirectUri = redirectUri;
 }
+- (void)initInstagram
+{
+    [[ShareToInstagram sharedInstance] initInstagram];
+}
+
 
 -(BOOL) handleOpenURL:(NSURL *) url
 {
@@ -314,7 +319,7 @@
                 [alertView show];
                 return;
             }
-            [ShareToInstagram postImage:_shareContent.image.compressedImage withCaption:_shareContent.desc inView:[UIApplication sharedApplication].keyWindow.rootViewController.view];
+            [[ShareToInstagram sharedInstance] postImage:_shareContent.image.compressedImage withCaption:_shareContent.title inView:[UIApplication sharedApplication].keyWindow.rootViewController.view];
         }
             break;
         default:

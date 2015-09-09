@@ -30,6 +30,11 @@ NSString* const aInstagramOnlyPhotoFileName = @"tempinstgramphoto.igo";
     return sharedInstance;
 }
 
+- (void)initInstagram
+{
+    self.photoFileName = aInstagramOnlyPhotoFileName;
+}
+
 + (void) setPhotoFileName:(NSString*)fileName {
     [ShareToInstagram sharedInstance].photoFileName = fileName;
 }
@@ -51,15 +56,11 @@ NSString* const aInstagramOnlyPhotoFileName = @"tempinstgramphoto.igo";
     return [NSString stringWithFormat:@"%@/%@",[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"],self.photoFileName];
 }
 
-+ (void) postImage:(UIImage*)image inView:(UIView*)view {
+- (void) postImage:(UIImage*)image inView:(UIView*)view {
     [self postImage:image withCaption:nil inView:view];
 }
-+ (void) postImage:(UIImage*)image withCaption:(NSString*)caption inView:(UIView*)view {
+- (void) postImage:(UIImage*)image withCaption:(NSString*)caption inView:(UIView*)view {
     [self postImage:image withCaption:caption inView:view delegate:nil];
-}
-
-+ (void) postImage:(UIImage*)image withCaption:(NSString*)caption inView:(UIView*)view delegate:(id<UIDocumentInteractionControllerDelegate>)delegate {
-    [[ShareToInstagram sharedInstance] postImage:image withCaption:caption inView:view delegate:delegate];
 }
 
 - (void) postImage:(UIImage*)image withCaption:(NSString*)caption inView:(UIView*)view delegate:(id<UIDocumentInteractionControllerDelegate>)delegate
