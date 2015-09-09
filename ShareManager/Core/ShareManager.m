@@ -107,15 +107,20 @@
 -(BOOL) handleOpenURL:(NSURL *) url
 {
     NSLog(@"handleOpenURL: %@",url.absoluteString);
-    //tencentQQ
+    //TencentQQ
     NSRange r = [url.absoluteString rangeOfString:_tencentQQAppKey];
     if (r.location != NSNotFound) {
         return [[ShareToTencentQQ sharedInstance] handleOpenURL:url];
     }
-    //weixin
+    //Weixin
     r = [url.absoluteString rangeOfString:_weixinAppKey];
     if (r.location != NSNotFound) {
         return [[ShareToWeixin sharedInstance] handleOpenURL:url];
+    }
+    //Instagram
+    r = [url.absoluteString rangeOfString:aInstagramAppURLString];
+    if (r.location != NSNotFound) {
+        return [[ShareToInstagram sharedInstance] handleOpenURL:url];
     }
     return NO;
 }
@@ -305,6 +310,23 @@
                                                            
                                                        }];
             
+        }
+            break;
+        case SMPlatformInstagram:
+        {
+            [ShareToInstagram postImage:_shareContent.image.compressedImage withCaption:_shareContent.title inView:[UIApplication sharedApplication].keyWindow.rootViewController.view];
+            
+//            [[ShareToInstagram sharedInstance] shareWithContent:_shareContent completionBlock:^(ShareContentState resultCode) {
+//                if (successBlock) {
+//                    successBlock(resultCode);
+//                }
+//                [self showShareResultWithPlatform:SMPlatformInstagram state:ShareContentStateSuccess];
+//            } failedBlock:^(ShareContentState resultCode) {
+//                if (failBlock) {
+//                    failBlock(resultCode);
+//                }
+//                [self showShareResultWithPlatform:SMPlatformInstagram state:ShareContentStateFail];
+//            }];
         }
             break;
         default:
