@@ -5,8 +5,8 @@ A SNS Platforms Share Manager for ios, support Instagram, Facebook, Twitter, Wei
 Support single and batch share to social platforms.
 
 # PreView
-<img src="https://raw.githubusercontent.com/imjerrybao/ShareManager/master/ReadmeImages/s1.jpg" alt="Drawing" width="320px" />
-<img src="https://raw.githubusercontent.com/imjerrybao/ShareManager/master/ReadmeImages/s2.jpg" alt="Drawing" width="320px" />
+<img src="https://raw.githubusercontent.com/imjerrybao/ShareManager/master/ReadmeImages/s1.png" alt="Drawing" width="320px" />
+<img src="https://raw.githubusercontent.com/imjerrybao/ShareManager/master/ReadmeImages/s2.png" alt="Drawing" width="320px" />
 
 # How To Integrate to Your Project
 1. System Requirement
