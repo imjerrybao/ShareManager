@@ -8,9 +8,9 @@
 
 #import "ShareManager.h"
 
-#define ShareImageList    @[@"sns_weibo", @"sns_qzone", @"sns_weixin", @"sns_facebook", @"sns_twitter"]
-#define ShareTitleList    @[Locale(@"sm.weibo"), Locale(@"sm.qzone"), Locale(@"sm.weixin"), Locale(@"sm.facebook"), Locale(@"sm.twitter")]
-#define ShareTagList      @[@(SMPlatformWeiboOAuth), @(SMPlatformTencentQQ), @(SMPlatformWeixin), @(SMPlatformFacebookOAuth), @(SMPlatformTwitterOAuth)]
+#define ShareImageList    @[@"sns_weibo", @"sns_qzone", @"sns_weixin", @"sns_facebook", @"sns_twitter", @"sns_instagram"]
+#define ShareTitleList    @[Locale(@"sm.weibo"), Locale(@"sm.qzone"), Locale(@"sm.weixin"), Locale(@"sm.facebook"), Locale(@"sm.twitter"), Locale(@"sm.instagram")]
+#define ShareTagList      @[@(SMPlatformWeiboOAuth), @(SMPlatformTencentQQ), @(SMPlatformWeixin), @(SMPlatformFacebookOAuth), @(SMPlatformTwitterOAuth), @(SMPlatformInstagram)]
 
 @interface ShareManager ()
 @property (nonatomic, strong) NSString *tencentQQAppKey; //QQ App Key

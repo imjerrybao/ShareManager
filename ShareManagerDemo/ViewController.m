@@ -17,13 +17,14 @@
 @property (nonatomic, strong) NSString *sUrl;
 @property (nonatomic, strong) SMImage *sImage;
 @property (nonatomic, strong) NSMutableArray *shareList;
-@property (nonatomic) BOOL enableFacebook, enableTwitter, enableWeibo, enableWeixin, enableQQ;
+@property (nonatomic) BOOL enableFacebook, enableTwitter, enableWeibo, enableWeixin, enableQQ, enableInstagram;
 
 @property (weak, nonatomic) IBOutlet UIButton *facebookBtn;
 @property (weak, nonatomic) IBOutlet UIButton *twitterBtn;
 @property (weak, nonatomic) IBOutlet UIButton *weiboBtn;
 @property (weak, nonatomic) IBOutlet UIButton *weixinBtn;
 @property (weak, nonatomic) IBOutlet UIButton *qzoneBtn;
+@property (weak, nonatomic) IBOutlet UIButton *instagramBtn;
 @end
 
 @implementation ViewController
@@ -43,6 +44,7 @@
     _weiboBtn.tag = 1000+SMPlatformWeiboOAuth;
     _weixinBtn.tag = 1000+SMPlatformWeixin;
     _qzoneBtn.tag = 1000+SMPlatformTencentQQ;
+    _instagramBtn.tag = 1000+SMPlatformInstagram;
     
     [ShareManager sharedManager].shareDelegate = self;
 }
@@ -134,6 +136,18 @@
                 [_shareList removeObject:@(SMPlatformTencentQQ)];
             }
             _enableQQ = !_enableQQ;
+        }
+            break;
+        case SMPlatformInstagram:
+        {
+            if (!_enableInstagram) {
+                [_instagramBtn setImage:[UIImage imageNamed:@"SMResources.bundle/images/instagram2"] forState:UIControlStateNormal];
+                [_shareList addObject:@(SMPlatformInstagram)];
+            } else {
+                [_instagramBtn setImage:[UIImage imageNamed:@"SMResources.bundle/images/instagram1"] forState:UIControlStateNormal];
+                [_shareList removeObject:@(SMPlatformInstagram)];
+            }
+            _enableInstagram = !_enableInstagram;
         }
             break;
             

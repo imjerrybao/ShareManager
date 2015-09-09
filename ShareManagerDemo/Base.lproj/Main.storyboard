@@ -115,6 +115,19 @@
                                     <action selector="enablePlatForm:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="cAz-ii-42k"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOy-we-eoE">
+                                <rect key="frame" x="191" y="325" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="CpB-GP-OOI"/>
+                                    <constraint firstAttribute="height" constant="25" id="Vth-df-U2M"/>
+                                </constraints>
+                                <state key="normal" image="SMResources.bundle/images/instagram1.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="enablePlatForm:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="0qy-lT-kju"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -137,6 +150,8 @@
                             <constraint firstItem="8wf-td-M0a" firstAttribute="centerY" secondItem="eOV-mp-jWf" secondAttribute="centerY" id="dZe-0e-fzf"/>
                             <constraint firstItem="qVQ-cR-rp7" firstAttribute="top" secondItem="mqL-mF-jgP" secondAttribute="bottom" constant="51" id="ebH-mJ-uhN"/>
                             <constraint firstAttribute="centerY" secondItem="mqL-mF-jgP" secondAttribute="centerY" id="gUT-u0-0xQ"/>
+                            <constraint firstItem="XOy-we-eoE" firstAttribute="leading" secondItem="xY4-dj-Z9W" secondAttribute="trailing" constant="10" id="hgI-sD-A39"/>
+                            <constraint firstItem="xY4-dj-Z9W" firstAttribute="centerY" secondItem="XOy-we-eoE" secondAttribute="centerY" id="j41-ke-zpu"/>
                             <constraint firstItem="mqL-mF-jgP" firstAttribute="centerY" secondItem="eOV-mp-jWf" secondAttribute="centerY" constant="2.5" id="mTU-5G-eAW"/>
                             <constraint firstItem="bfU-Zs-K3J" firstAttribute="centerY" secondItem="xY4-dj-Z9W" secondAttribute="centerY" id="ygX-d9-PMA"/>
                             <constraint firstItem="xY4-dj-Z9W" firstAttribute="leading" secondItem="bfU-Zs-K3J" secondAttribute="trailing" constant="10" id="yva-87-03O"/>
@@ -154,6 +169,7 @@
                     </view>
                     <connections>
                         <outlet property="facebookBtn" destination="eOV-mp-jWf" id="zMh-45-OuM"/>
+                        <outlet property="instagramBtn" destination="XOy-we-eoE" id="Q7A-Aq-bmH"/>
                         <outlet property="qzoneBtn" destination="xY4-dj-Z9W" id="GiN-EM-G6Y"/>
                         <outlet property="twitterBtn" destination="8wf-td-M0a" id="ktJ-3b-fuH"/>
                         <outlet property="weiboBtn" destination="2OL-Sf-2BR" id="0ul-fa-Ogh"/>
@@ -166,6 +182,7 @@
     </scenes>
     <resources>
         <image name="SMResources.bundle/images/facebook1.png" width="16" height="16"/>
+        <image name="SMResources.bundle/images/instagram1.png" width="16" height="16"/>
         <image name="SMResources.bundle/images/qzone1.png" width="16" height="16"/>
         <image name="SMResources.bundle/images/twitter1.png" width="16" height="16"/>
         <image name="SMResources.bundle/images/weibo1.png" width="16" height="16"/>
