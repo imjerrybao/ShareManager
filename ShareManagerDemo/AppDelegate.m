@@ -32,7 +32,6 @@
     [[ShareManager sharedManager] initWeiboWithAppKey:@"kWeiboAppKey" appSecret:@"kWeiboSecret" redirectUri:@"kWeiboRedirectUri"];
     [[ShareManager sharedManager] initTwitterWithAppKey:@"kTwitterAppKey" appSecret:@"kTwitterAppSecret" redirectUri:@"kTwitterRedirectUri"];
     [[ShareManager sharedManager] initFacebookWithAppKey:@"kFacebookAppKey" appSecret:@"kFacebookAppSecret" redirectUri:@"kFacebookRedirectUri"];
-    [[ShareManager sharedManager] initInstagramWithAppKey:@"kInstagramAppKey" appSecret:@"kInstagramAppSecret" redirectUri:@"kInstagramRedirectUri"];
 }
 
 - (BOOL)application:(UIApplication *)application  handleOpenURL:(NSURL *)url

@@ -37,14 +37,6 @@ extern NSString* const aInstagramOnlyPhotoFileName;
 
 + (ShareToInstagram *)sharedInstance;
 
-- (BOOL)handleOpenURL:(NSURL *)url;
-
-- (void)initInstagramWithAppKey:(NSString *)appKey appSecret:(NSString *)appSecret redirectUri:(NSString *)redirectUri;
-
-- (void)shareWithContent:(SMContent *)content
-         completionBlock:(ShareInstagramBlock)aCompletionBlock
-             failedBlock:(ShareInstagramBlock)aFailedBlock;
-
 + (void) setPhotoFileName:(NSString*)fileName;
 + (NSString*) photoFileName;
 

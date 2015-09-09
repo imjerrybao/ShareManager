@@ -91,15 +91,6 @@ typedef void (^ShareManagerBlock)(ShareContentState resultCode);
 - (void)initFacebookWithAppKey:(NSString *)appKey appSecret:(NSString *)appSecret redirectUri:(NSString *)redirectUri;
 
 /**
- *  Initialize Instagram Platform
- *
- *  @param appKey      Instagram App Key
- *  @param appSecret   Instagram App Secret
- *  @param redirectUri Instagram Redirect Uri
- */
-- (void)initInstagramWithAppKey:(NSString *)appKey appSecret:(NSString *)appSecret redirectUri:(NSString *)redirectUri;
-
-/**
  *  Open A Resource Identified By URL
  *
  *  @param url The URL of Resource

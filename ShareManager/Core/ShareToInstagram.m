@@ -30,44 +30,6 @@ NSString* const aInstagramOnlyPhotoFileName = @"tempinstgramphoto.igo";
     return sharedInstance;
 }
 
-- (void)initInstagramWithAppKey:(NSString *)appKey appSecret:(NSString *)appSecret redirectUri:(NSString *)redirectUri
-{
-    _appKey = appKey;
-    _appSecret = appSecret;
-    _redirectUri = redirectUri;
-    
-    self.photoFileName = aInstagramOnlyPhotoFileName;
-}
-- (BOOL)handleOpenURL:(NSURL *)url
-{
-    return [[UIApplication sharedApplication] openURL:url];
-}
-
-- (void)setCompletionBlock:(ShareInstagramBlock)aCompletionBlock {
-    _completionBlock = [aCompletionBlock copy];
-}
-- (void)setFailedBlock:(ShareInstagramBlock)aFailedBlock {
-    _failureBlock = [aFailedBlock copy];
-}
-- (void)setCompletionTokenBlock:(ObtainInstagramTokenBlock)aCompletionBlock {
-    _completionTokenBlock = [aCompletionBlock copy];
-}
-- (void)setFailedTokenBlock:(ObtainInstagramTokenBlock)aFailedBlock {
-    _failureTokenBlock = [aFailedBlock copy];
-}
-
-- (void)shareWithContent:(SMContent *)content
-         completionBlock:(ShareInstagramBlock)aCompletionBlock
-             failedBlock:(ShareInstagramBlock)aFailedBlock
-{
-    [self setCompletionBlock:aCompletionBlock];
-    [self setFailedBlock:aFailedBlock];
-    
-    _content = content;
-    
-    [self handleOpenURL:[NSURL URLWithString:aInstagramAppURLString]];
-}
-
 + (void) setPhotoFileName:(NSString*)fileName {
     [ShareToInstagram sharedInstance].photoFileName = fileName;
 }

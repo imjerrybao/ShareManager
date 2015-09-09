@@ -99,11 +99,6 @@
     _facebookRedirectUri = redirectUri;
 }
 
-- (void)initInstagramWithAppKey:(NSString *)appKey appSecret:(NSString *)appSecret redirectUri:(NSString *)redirectUri
-{
-    [[ShareToInstagram sharedInstance] initInstagramWithAppKey:appKey appSecret:appSecret redirectUri:redirectUri];
-}
-
 -(BOOL) handleOpenURL:(NSURL *) url
 {
     NSLog(@"handleOpenURL: %@",url.absoluteString);
@@ -116,11 +111,6 @@
     r = [url.absoluteString rangeOfString:_weixinAppKey];
     if (r.location != NSNotFound) {
         return [[ShareToWeixin sharedInstance] handleOpenURL:url];
-    }
-    //Instagram
-    r = [url.absoluteString rangeOfString:aInstagramAppURLString];
-    if (r.location != NSNotFound) {
-        return [[ShareToInstagram sharedInstance] handleOpenURL:url];
     }
     return NO;
 }
@@ -314,19 +304,17 @@
             break;
         case SMPlatformInstagram:
         {
-            [ShareToInstagram postImage:_shareContent.image.compressedImage withCaption:_shareContent.title inView:[UIApplication sharedApplication].keyWindow.rootViewController.view];
-            
-//            [[ShareToInstagram sharedInstance] shareWithContent:_shareContent completionBlock:^(ShareContentState resultCode) {
-//                if (successBlock) {
-//                    successBlock(resultCode);
-//                }
-//                [self showShareResultWithPlatform:SMPlatformInstagram state:ShareContentStateSuccess];
-//            } failedBlock:^(ShareContentState resultCode) {
-//                if (failBlock) {
-//                    failBlock(resultCode);
-//                }
-//                [self showShareResultWithPlatform:SMPlatformInstagram state:ShareContentStateFail];
-//            }];
+            if (![ShareToInstagram isAppInstalled]) {
+                UIAlertView *alertView = [[UIAlertView alloc] bk_initWithTitle:Locale(@"sm.general.hint") message:Locale(@"sm.shareto.instagram.notinstall")];
+                [alertView bk_setCancelButtonWithTitle:Locale(@"sm.general.ok") handler:^{
+                    if (self.shareFinishBlock) {
+                        self.shareFinishBlock();
+                    }
+                }];
+                [alertView show];
+                return;
+            }
+            [ShareToInstagram postImage:_shareContent.image.compressedImage withCaption:_shareContent.desc inView:[UIApplication sharedApplication].keyWindow.rootViewController.view];
         }
             break;
         default:

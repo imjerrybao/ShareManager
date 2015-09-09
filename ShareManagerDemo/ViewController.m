@@ -217,17 +217,6 @@
                 }
             }
             break;
-        case SMPlatformInstagram:
-            if (state == ShareContentStateSuccess) {
-                message = @"(custom string) instagram success";
-            } else {
-                if (state == ShareContentStateUnInstalled) {
-                    message = @"(custom string) instagram not install";
-                } else {
-                    message = @"(custom string) instagram share fail";
-                }
-            }
-            break;
         default:
             break;
     }

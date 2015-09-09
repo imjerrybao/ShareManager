@@ -20,6 +20,7 @@
 "sm.shareto.qzone.success" = "分享到QQ空间成功";
 "sm.shareto.qzone.fail" = "分享到QQ空间失败";
 "sm.shareto.qzone.notinstall" = "您还没有安装QQ客户端";
+"sm.shareto.instagram.notinstall" = "您还没有安装Instagram客户端";
 "sm.shareto.instagram.success" = "分享到Instagram成功";
 "sm.shareto.instagram.fail" = "分享到Instagram失败";
 

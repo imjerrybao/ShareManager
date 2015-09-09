@@ -40,16 +40,6 @@
 				<string>your_app_key</string>
 			</array>
 		</dict>
-		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
-			<key>CFBundleURLName</key>
-			<string>instagram</string>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>instagram://app</string>
-			</array>
-		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
