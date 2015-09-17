@@ -50,7 +50,7 @@
 <li>
 <p>AppDelegate add below code</p>
 
-<div class="highlight highlight-objective-c"><pre>#<span class="pl-k">import</span> <span class="pl-s"><span class="pl-pds">"</span>ShareManager.h<span class="pl-pds">"</span></span>
+<div class="highlight highlight-source-objc"><pre>#<span class="pl-k">import</span> <span class="pl-s"><span class="pl-pds">"</span>ShareManager.h<span class="pl-pds">"</span></span>
 
 - (<span class="pl-k">BOOL</span>)application:(UIApplication *)application didFinishLaunchingWithOptions:(<span class="pl-c1">NSDictionary</span> *)launchOptions {
     <span class="pl-c">// Override point for customization after application launch.</span>
@@ -69,6 +69,7 @@
     [[ShareManager <span class="pl-c1">sharedManager</span>] <span class="pl-c1">initWeiboWithAppKey:</span><span class="pl-s"><span class="pl-pds">@"</span>kWeiboAppKey<span class="pl-pds">"</span></span> <span class="pl-c1">appSecret:</span><span class="pl-s"><span class="pl-pds">@"</span>kWeiboSecret<span class="pl-pds">"</span></span> <span class="pl-c1">redirectUri:</span><span class="pl-s"><span class="pl-pds">@"</span>kWeiboRedirectUri<span class="pl-pds">"</span></span>];
     [[ShareManager <span class="pl-c1">sharedManager</span>] <span class="pl-c1">initTwitterWithAppKey:</span><span class="pl-s"><span class="pl-pds">@"</span>kTwitterAppKey<span class="pl-pds">"</span></span> <span class="pl-c1">appSecret:</span><span class="pl-s"><span class="pl-pds">@"</span>kTwitterAppSecret<span class="pl-pds">"</span></span> <span class="pl-c1">redirectUri:</span><span class="pl-s"><span class="pl-pds">@"</span>kTwitterRedirectUri<span class="pl-pds">"</span></span>];
     [[ShareManager <span class="pl-c1">sharedManager</span>] <span class="pl-c1">initFacebookWithAppKey:</span><span class="pl-s"><span class="pl-pds">@"</span>kFacebookAppKey<span class="pl-pds">"</span></span> <span class="pl-c1">appSecret:</span><span class="pl-s"><span class="pl-pds">@"</span>kFacebookAppSecret<span class="pl-pds">"</span></span> <span class="pl-c1">redirectUri:</span><span class="pl-s"><span class="pl-pds">@"</span>kFacebookRedirectUri<span class="pl-pds">"</span></span>];
+    [[ShareManager <span class="pl-c1">sharedManager</span>] <span class="pl-c1">initInstagram</span>];
 }
 
 - (<span class="pl-k">BOOL</span>)application:(UIApplication *)application  handleOpenURL:(<span class="pl-c1">NSURL</span> *)url
@@ -95,7 +96,7 @@
 <li>
 <p>Single Share</p>
 
-<div class="highlight highlight-objective-c"><pre><span class="pl-c1">NSString</span> *<span class="pl-smi">sTitle</span> = <span class="pl-s"><span class="pl-pds">@"</span>Your QQ or Weixin share title<span class="pl-pds">"</span></span>; <span class="pl-c">//Only support QQ and Weixin </span>
+<div class="highlight highlight-source-objc"><pre><span class="pl-c1">NSString</span> *<span class="pl-smi">sTitle</span> = <span class="pl-s"><span class="pl-pds">@"</span>Your QQ or Weixin share title<span class="pl-pds">"</span></span>; <span class="pl-c">//Only support QQ and Weixin </span>
 <span class="pl-c1">NSString</span> *<span class="pl-smi">sDesc</span> = <span class="pl-s"><span class="pl-pds">@"</span>Your share content<span class="pl-pds">"</span></span>;
 <span class="pl-c1">NSString</span> *<span class="pl-smi">sUrl</span> = <span class="pl-s"><span class="pl-pds">@"</span>http://www.facebook.com<span class="pl-pds">"</span></span>;
 SMImage *<span class="pl-smi">sImage</span> = [[SMImage <span class="pl-c1">alloc</span>] <span class="pl-c1">initWithImageUrl:</span><span class="pl-s"><span class="pl-pds">@"</span>http://e.hiphotos.baidu.com/image/w<span class="pl-c1">%3D</span>310/sign=af410cc1f536afc30e0c39648319eb85/6f061d950a7b0208d7fa7ee060d9f2d3572cc884.jpg<span class="pl-pds">"</span></span>];
@@ -106,7 +107,7 @@ SMImage *<span class="pl-smi">sImage</span> = [[SMImage <span class="pl-c1">allo
 <li>
 <p>Batch Share</p>
 
-<div class="highlight highlight-objective-c"><pre><span class="pl-c1">NSString</span> *<span class="pl-smi">sTitle</span> = <span class="pl-s"><span class="pl-pds">@"</span>Your QQ or Weixin share title<span class="pl-pds">"</span></span>; <span class="pl-c">//Only support QQ and Weixin </span>
+<div class="highlight highlight-source-objc"><pre><span class="pl-c1">NSString</span> *<span class="pl-smi">sTitle</span> = <span class="pl-s"><span class="pl-pds">@"</span>Your QQ or Weixin share title<span class="pl-pds">"</span></span>; <span class="pl-c">//Only support QQ and Weixin </span>
 <span class="pl-c1">NSString</span> *<span class="pl-smi">sDesc</span> = <span class="pl-s"><span class="pl-pds">@"</span>Your share content<span class="pl-pds">"</span></span>;
 <span class="pl-c1">NSString</span> *<span class="pl-smi">sUrl</span> = <span class="pl-s"><span class="pl-pds">@"</span>http://www.facebook.com<span class="pl-pds">"</span></span>;
 SMImage *<span class="pl-smi">sImage</span> = [[SMImage <span class="pl-c1">alloc</span>] <span class="pl-c1">initWithImageUrl:</span><span class="pl-s"><span class="pl-pds">@"</span>http://e.hiphotos.baidu.com/image/w<span class="pl-c1">%3D</span>310/sign=af410cc1f536afc30e0c39648319eb85/6f061d950a7b0208d7fa7ee060d9f2d3572cc884.jpg<span class="pl-pds">"</span></span>];
