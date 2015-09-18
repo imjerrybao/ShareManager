@@ -1,5 +1,5 @@
 # ShareManager
-A SNS Platforms Share Manager for ios, support Instagram, Facebook, Twitter, Weibo, QQ and Wechat.
+A SNS(Social Networking Services) Share Manager for ios, support Instagram, Facebook, Twitter, Weibo, QQ and Wechat.
 
 
 Support single and batch share to social platforms.
