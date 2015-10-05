@@ -19,7 +19,7 @@ Support single and batch share to social platforms.
     pod 'ShareManager'
     ````
 
-3. AppDelegate add below code
+3. AppDelegate add below code (Be remembered replace app key, secret, redirect uri to yours)
     ```` objective-c
     #import "ShareManager.h"
 
