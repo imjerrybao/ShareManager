@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "04AA1A2AE3F7F1DBDBAB14B74F7A688BD0CFCB0E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "04AA1A2AE3F7F1DBDBAB14B74F7A688BD0CFCB0E" : 0,
+    "47E35372B5D8DD8D71E8EAB3B730C66F208092E5" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "3B8663B6-F486-40E0-8DAD-8740823DEDF1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "04AA1A2AE3F7F1DBDBAB14B74F7A688BD0CFCB0E" : "ShareManager",
+    "47E35372B5D8DD8D71E8EAB3B730C66F208092E5" : "ShareManagerDemo"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ShareManagerDemo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ShareManagerDemo.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/imjerrybao\/ShareManager.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "04AA1A2AE3F7F1DBDBAB14B74F7A688BD0CFCB0E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Cmgine\/ShareManagerDemo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "47E35372B5D8DD8D71E8EAB3B730C66F208092E5"
+    }
+  ]
+}
