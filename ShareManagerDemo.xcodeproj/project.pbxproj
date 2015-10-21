@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180714F81BD7C60300CBE222 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8313A11B7215F600CF6435 /* CoreTelephony.framework */; };
 		1830B9B71B88B48100F1A841 /* SMShareResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 1830B9B61B88B48100F1A841 /* SMShareResult.m */; };
 		18D9FB211B9F9D1E00373E4B /* ShareToInstagram.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D9FB201B9F9D1E00373E4B /* ShareToInstagram.m */; };
 		3B8311BC1B72050F00CF6435 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8311BB1B72050F00CF6435 /* main.m */; };
@@ -113,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				180714F81BD7C60300CBE222 /* CoreTelephony.framework in Frameworks */,
 				3BC5EE761B79C58F00FE1AC9 /* libc++.dylib in Frameworks */,
 				3BD55C0C1B743F9B006428ED /* libsqlite3.0.dylib in Frameworks */,
 				3BD55C0A1B743F96006428ED /* libz.dylib in Frameworks */,
