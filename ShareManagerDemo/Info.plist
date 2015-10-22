@@ -24,40 +24,10 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>tencent</string>
+			<string>tencentopenapi</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>tencent222222</string>
-			</array>
-		</dict>
-		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
-			<key>CFBundleURLName</key>
-			<string>qzoneScheme</string>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>mqzone</string>
-			</array>
-		</dict>
-		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
-			<key>CFBundleURLName</key>
-			<string>tencentApiIdentifier</string>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>tencent222222.content</string>
-			</array>
-		</dict>
-		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
-			<key>CFBundleURLName</key>
-			<string>mqqapi</string>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>QQ0003640E</string>
+				<string>your_qq_key</string>
 			</array>
 		</dict>
 		<dict>
@@ -67,7 +37,7 @@
 			<string>weixin</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>your_weixin_api</string>
+				<string>your_weixin_key</string>
 			</array>
 		</dict>
 	</array>
@@ -75,11 +45,12 @@
 	<string>1</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
-		<string>mqzone</string>
+		<string>weixin</string>
 		<string>mqqapi</string>
 		<string>mqq</string>
 		<string>mqqopensdkapiV2</string>
-		<string>weixin</string>
+		<string>mqqbrowser</string>
+		<string>mttbrowser</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>

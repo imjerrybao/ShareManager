@@ -27,6 +27,7 @@
 - (void)initSharePlatform
 {
 #warning Replace the share platforms app key, secret and redirect uri to yours
+    NSLog(@"Please replace the share platforms app key, secret and redirect uri to yours at the beginning.");
     [[ShareManager sharedManager] initTencentQQWithAppKey:@"kQzoneKey" appSecret:@"kQzoneSecret"];
     [[ShareManager sharedManager] initWexinWithAppKey:@"kWeixinAppKey" appSecret:@"kWeixinAppSecret"];
     [[ShareManager sharedManager] initWeiboWithAppKey:@"kWeiboAppKey" appSecret:@"kWeiboSecret" redirectUri:@"kWeiboRedirectUri"];
