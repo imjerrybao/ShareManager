@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target   = '7.0'
   s.platform                = :ios, '7.0'
   s.name                    = 'ShareManager'
-  s.version                 = '0.3.2'
+  s.version                 = '0.3.3'
   s.summary                 = 'A SNS(Social Networking Services) Share Manager for ios, support Instagram, Facebook, Twitter, Weibo, QQ and Wechat.'
   s.homepage                = 'https://github.com/imjerrybao/ShareManager'
   s.license                 = { :type => 'MIT', :file => 'LICENSE' }
