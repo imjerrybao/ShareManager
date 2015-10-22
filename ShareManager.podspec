@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.public_header_files     = 'ShareManager/**/*.h'
   s.source_files            = 'ShareManager/**/*.{h,m}'
   s.resources               = ['ShareManager/SMResources.bundle', 'ShareManager/lib/TencentQQ/TencentOpenApi_IOS_Bundle.bundle']
-  s.ios.frameworks          = 'SystemConfiguration'
+  s.ios.frameworks          = ['SystemConfiguration', 'CoreTelephony']
   s.ios.vendored_frameworks = 'ShareManager/lib/TencentQQ/TencentOpenAPI.framework'
   s.libraries               = 'c++', 'sqlite3.0', 'z'
   s.ios.vendored_library    = 'ShareManager/lib/WeChatSDK/libWeChatSDK.a'
