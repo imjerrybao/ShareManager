@@ -41,6 +41,10 @@ Support single and batch share to social platforms.
         [[ShareManager sharedManager] initTwitterWithAppKey:@"kTwitterAppKey" appSecret:@"kTwitterAppSecret" redirectUri:@"kTwitterRedirectUri"];
         [[ShareManager sharedManager] initFacebookWithAppKey:@"kFacebookAppKey" appSecret:@"kFacebookAppSecret" redirectUri:@"kFacebookRedirectUri"];
         [[ShareManager sharedManager] initInstagram];
+        
+        //The Platforms To Share
+        NSArray *platforms = @[@(SMPlatformFacebookOAuth),@(SMPlatformTwitterOAuth),@(SMPlatformInstagram),@(SMPlatformWeiboOAuth),@(SMPlatformTencentQQ),@(SMPlatformWeixin)];
+        [[ShareManager sharedManager] usePlatforms:platforms];
     }
 
     - (BOOL)application:(UIApplication *)application  handleOpenURL:(NSURL *)url
