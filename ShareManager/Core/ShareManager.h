@@ -40,6 +40,8 @@ typedef void (^ShareManagerBlock)(ShareContentState resultCode);
 
 @property (nonatomic, assign) id<ShareManagerDelegate> shareDelegate; //ShareManager Delegate
 
+@property (nonatomic, strong) NSArray *usedPlatforms;
+
 /**
  *  Get ShareManager Singleton
  *
@@ -89,6 +91,13 @@ typedef void (^ShareManagerBlock)(ShareContentState resultCode);
  *  @param redirectUri Facebook Redirect Uri
  */
 - (void)initFacebookWithAppKey:(NSString *)appKey appSecret:(NSString *)appSecret redirectUri:(NSString *)redirectUri;
+
+/**
+ *  The Platforms To Share
+ *
+ *  @param platforms Platforms
+ */
+- (void)usePlatforms:(NSArray *)platforms;
 
 /**
  *  Initialize Instagram Platform

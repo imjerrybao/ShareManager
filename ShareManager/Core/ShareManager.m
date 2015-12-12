@@ -7,10 +7,10 @@
 //
 
 #import "ShareManager.h"
-
 #define ShareImageList    @[@"sns_weibo", @"sns_qzone", @"sns_weixin", @"sns_facebook", @"sns_twitter", @"sns_instagram"]
 #define ShareTitleList    @[Locale(@"sm.weibo"), Locale(@"sm.qzone"), Locale(@"sm.weixin"), Locale(@"sm.facebook"), Locale(@"sm.twitter"), Locale(@"sm.instagram")]
 #define ShareTagList      @[@(SMPlatformWeiboOAuth), @(SMPlatformTencentQQ), @(SMPlatformWeixin), @(SMPlatformFacebookOAuth), @(SMPlatformTwitterOAuth), @(SMPlatformInstagram)]
+
 
 @interface ShareManager ()
 @property (nonatomic, strong) NSString *tencentQQAppKey; //QQ App Key
@@ -37,6 +37,11 @@
 @property (nonatomic, copy) ShareFinishBlock shareFinishBlock;
 
 @property (nonatomic, assign) int index;
+
+@property (nonatomic, strong) NSMutableArray *shareImageList;
+@property (nonatomic, strong) NSMutableArray *shareTitleList;
+@property (nonatomic, strong) NSMutableArray *shareTagList;
+
 @end
 
 @implementation ShareManager
@@ -55,6 +60,9 @@
     self = [super init];
     if (self) {
         _index = 0;
+        _shareImageList = [NSMutableArray array];
+        _shareTitleList = [NSMutableArray array];
+        _shareTagList = [NSMutableArray array];
     }
     return self;
 }
@@ -101,6 +109,59 @@
 - (void)initInstagram
 {
     [[ShareToInstagram sharedInstance] initInstagram];
+}
+- (void)usePlatforms:(NSArray *)platforms
+{
+    _usedPlatforms = [NSArray arrayWithArray:platforms];
+    for (id platform in _usedPlatforms) {
+        switch ([platform integerValue]) {
+            case SMPlatformFacebookOAuth:
+            {
+                [_shareImageList addObject:@"sns_facebook"];
+                [_shareTitleList addObject:Locale(@"sm.facebook")];
+                [_shareTagList addObject:@(SMPlatformFacebookOAuth)];
+            }
+                break;
+            case SMPlatformTwitterOAuth:
+            {
+                [_shareImageList addObject:@"sns_twitter"];
+                [_shareTitleList addObject:Locale(@"sm.twitter")];
+                [_shareTagList addObject:@(SMPlatformTwitterOAuth)];
+            }
+                break;
+            case SMPlatformInstagram:
+            {
+                [_shareImageList addObject:@"sns_instagram"];
+                [_shareTitleList addObject:Locale(@"sm.instagram")];
+                [_shareTagList addObject:@(SMPlatformInstagram)];
+            }
+                break;
+            case SMPlatformWeiboOAuth:
+            {
+                [_shareImageList addObject:@"sns_weibo"];
+                [_shareTitleList addObject:Locale(@"sm.weibo")];
+                [_shareTagList addObject:@(SMPlatformWeiboOAuth)];
+            }
+                break;
+            case SMPlatformTencentQQ:
+            {
+                [_shareImageList addObject:@"sns_qzone"];
+                [_shareTitleList addObject:Locale(@"sm.qzone")];
+                [_shareTagList addObject:@(SMPlatformTencentQQ)];
+            }
+                break;
+            case SMPlatformWeixin:
+            {
+                [_shareImageList addObject:@"sns_weixin"];
+                [_shareTitleList addObject:Locale(@"sm.weixin")];
+                [_shareTagList addObject:@(SMPlatformWeixin)];
+            }
+                break;
+                
+            default:
+                break;
+        }
+    }
 }
 
 
@@ -170,7 +231,7 @@
 }
 - (void)showShareWindow
 {
-    [[ShareUI sharedInstance] showShareWindowWithImageList:ShareImageList titleList:ShareTitleList tagList:ShareTagList];
+    [[ShareUI sharedInstance] showShareWindowWithImageList:_shareImageList titleList:_shareTitleList tagList:_shareTagList];
     [ShareUI sharedInstance].delegate = self;
 }
 
@@ -246,7 +307,7 @@
                                                  }];
         }
             break;
-        case SMPlatformWeibo:
+//        case SMPlatformWeibo:
         case SMPlatformWeiboOAuth:
         {
             [[ShareToWeibo sharedInstance] shareOAuthWithContent:_shareContent
@@ -266,7 +327,7 @@
             
         }
             break;
-        case SMPlatformFacebook:
+//        case SMPlatformFacebook:
         case SMPlatformFacebookOAuth:
         {
             [[ShareToFacebook sharedInstance] shareOAuthWithContent:_shareContent
@@ -333,7 +394,7 @@
                             failBlock:(void(^)(void))failBlock
 {
     switch (platform) {
-        case SMPlatformFacebook:
+//        case SMPlatformFacebook:
         case SMPlatformFacebookOAuth:
         {
             [[ShareToFacebook sharedInstance] obtainAccessTokenWithCompletionBlock:^ {
@@ -367,7 +428,7 @@
             
         }
             break;
-        case SMPlatformWeibo:
+//        case SMPlatformWeibo:
         case SMPlatformWeiboOAuth:
         {
             [[ShareToWeibo sharedInstance] obtainAccessTokenWithCompletionBlock:^ {
@@ -532,13 +593,13 @@
                 return YES;
             }
             break;
-        case SMPlatformWeibo:
+//        case SMPlatformWeibo:
         case SMPlatformWeiboOAuth:
             if (![NSString isBlankString:[[NSUserDefaults standardUserDefaults] valueForKey:WEIBO_ACCESS_TOKEN]]) {
                 return YES;
             }
             break;
-        case SMPlatformFacebook:
+//        case SMPlatformFacebook:
         case SMPlatformFacebookOAuth:
             if (![NSString isBlankString:[[NSUserDefaults standardUserDefaults] valueForKey:FACEBOOK_ACCESS_TOKEN]]) {
                 return YES;
@@ -565,11 +626,11 @@
         case SMPlatformWeixin:
             [[NSUserDefaults standardUserDefaults] removeObjectForKey:WEIXIN_ACCESS_TOKEN];
             break;
-        case SMPlatformWeibo:
+//        case SMPlatformWeibo:
         case SMPlatformWeiboOAuth:
             [[NSUserDefaults standardUserDefaults] removeObjectForKey:WEIBO_ACCESS_TOKEN];
             break;
-        case SMPlatformFacebook:
+//        case SMPlatformFacebook:
         case SMPlatformFacebookOAuth:
             [[NSUserDefaults standardUserDefaults] removeObjectForKey:FACEBOOK_ACCESS_TOKEN];
             break;
@@ -597,13 +658,13 @@
                     [authList addObject:platform];
                 }
                 break;
-            case SMPlatformWeibo:
+//            case SMPlatformWeibo:
             case SMPlatformWeiboOAuth:
                 if ([ShareManager isAuthPlatform:SMPlatformWeiboOAuth]) {
                     [authList addObject:platform];
                 }
                 break;
-            case SMPlatformFacebook:
+//            case SMPlatformFacebook:
             case SMPlatformFacebookOAuth:
                 if ([ShareManager isAuthPlatform:SMPlatformFacebookOAuth]) {
                     [authList addObject:platform];

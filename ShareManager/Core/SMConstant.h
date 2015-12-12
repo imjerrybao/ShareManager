@@ -36,9 +36,9 @@ typedef enum{
 typedef NS_ENUM(NSInteger, SMPlatform) {
     SMPlatformTencentQQ = 1,
     SMPlatformWeixin,
-    SMPlatformWeibo,
+//    SMPlatformWeibo,
     SMPlatformWeiboOAuth,
-    SMPlatformFacebook,
+//    SMPlatformFacebook,
     SMPlatformFacebookOAuth,
     SMPlatformTwitterOAuth,
     SMPlatformInstagram,
