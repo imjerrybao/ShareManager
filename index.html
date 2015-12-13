@@ -57,7 +57,7 @@
 </code></pre>
 </li>
 <li>
-<p>AppDelegate add below code</p>
+<p>AppDelegate add below code (Be remembered replace the share platforms app key, secret, redirect uri to yours)</p>
 
 <div class="highlight highlight-source-objc"><pre>#<span class="pl-k">import</span> <span class="pl-s"><span class="pl-pds">"</span>ShareManager.h<span class="pl-pds">"</span></span>
 
@@ -79,6 +79,10 @@
     [[ShareManager <span class="pl-c1">sharedManager</span>] <span class="pl-c1">initTwitterWithAppKey:</span><span class="pl-s"><span class="pl-pds">@"</span>kTwitterAppKey<span class="pl-pds">"</span></span> <span class="pl-c1">appSecret:</span><span class="pl-s"><span class="pl-pds">@"</span>kTwitterAppSecret<span class="pl-pds">"</span></span> <span class="pl-c1">redirectUri:</span><span class="pl-s"><span class="pl-pds">@"</span>kTwitterRedirectUri<span class="pl-pds">"</span></span>];
     [[ShareManager <span class="pl-c1">sharedManager</span>] <span class="pl-c1">initFacebookWithAppKey:</span><span class="pl-s"><span class="pl-pds">@"</span>kFacebookAppKey<span class="pl-pds">"</span></span> <span class="pl-c1">appSecret:</span><span class="pl-s"><span class="pl-pds">@"</span>kFacebookAppSecret<span class="pl-pds">"</span></span> <span class="pl-c1">redirectUri:</span><span class="pl-s"><span class="pl-pds">@"</span>kFacebookRedirectUri<span class="pl-pds">"</span></span>];
     [[ShareManager <span class="pl-c1">sharedManager</span>] <span class="pl-c1">initInstagram</span>];
+
+    <span class="pl-c">//The Platforms To Share</span>
+    <span class="pl-c1">NSArray</span> *platforms = @[@(SMPlatformFacebookOAuth),@(SMPlatformTwitterOAuth),@(SMPlatformInstagram),@(SMPlatformWeiboOAuth),@(SMPlatformTencentQQ),@(SMPlatformWeixin)];
+    [[ShareManager <span class="pl-c1">sharedManager</span>] <span class="pl-c1">usePlatforms:</span>platforms];
 }
 
 - (<span class="pl-k">BOOL</span>)application:(UIApplication *)application  handleOpenURL:(<span class="pl-c1">NSURL</span> *)url
