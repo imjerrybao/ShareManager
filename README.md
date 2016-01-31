@@ -15,12 +15,12 @@ Support single and batch share to social platforms.
 
 2. Install via cocoapods
 
-    ````
+    ```
     pod 'ShareManager'
-    ````
+    ```
 
 3. AppDelegate add below code (Be remembered replace the share platforms app key, secret, redirect uri to yours)
-    ```` objective-c
+    ``` objective-c
     #import "ShareManager.h"
 
     - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -56,7 +56,7 @@ Support single and batch share to social platforms.
     {
         return [[ShareManager sharedManager] handleOpenURL:url];
     }
-    ````
+    ```
 
 4. Add URL Schemes to Info.plist
 
@@ -64,7 +64,7 @@ Support single and batch share to social platforms.
     
 # Usage
 1. Single Share
-    ```` objective-c
+    ``` objective-c
     NSString *sTitle = @"Your QQ or Weixin share title"; //Only support QQ and Weixin 
     NSString *sDesc = @"Your share content";
     NSString *sUrl = @"http://www.facebook.com";
@@ -72,9 +72,9 @@ Support single and batch share to social platforms.
     
     [[ShareManager sharedManager] setContentWithTitle:sTitle description:sDesc image:sImage url:sUrl];
     [[ShareManager sharedManager] showShareWindow];
-    ````
+    ```
 2. Batch Share
-    ```` objective-c
+    ``` objective-c
     NSString *sTitle = @"Your QQ or Weixin share title"; //Only support QQ and Weixin 
     NSString *sDesc = @"Your share content";
     NSString *sUrl = @"http://www.facebook.com";
@@ -83,12 +83,12 @@ Support single and batch share to social platforms.
     
     [[ShareManager sharedManager] setContentWithTitle:sTitle description:sDesc image:sImage url:sUrl];
     [[ShareManager sharedManager] batchShareWithShareList:shareList];
-    ````
+    ```
 # Handle Share Result
     use ShareManagerDelegate
-    ````
+    ``` objective-c
     - (void)showShareResult:(SMShareResult *)result;
-    ````
+    ```
     Reference the demos ViewController.m file
 
 # Issues
