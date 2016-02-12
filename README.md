@@ -13,7 +13,7 @@ Support single and batch share to social platforms.
 
     iOS 7 or later
 
-2. Install via cocoapods
+2. Install via CocoaPods
 
     ```
     pod 'ShareManager'
